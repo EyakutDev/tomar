@@ -1,0 +1,14 @@
+services:
+  db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: merak
+      POSTGRES_PASSWORD: merak-local
+      POSTGRES_DB: merak
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - merak_pgdata:/var/lib/postgresql/data
+
+volumes:
+  merak_pgdata:
