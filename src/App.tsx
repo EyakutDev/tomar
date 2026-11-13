@@ -5,12 +5,29 @@ import type { NewPassage, Passage, ReportReason } from "./types";
 
 type View = "feed" | "submit" | "saved";
 type Theme = "light" | "dark";
+type PassageDraft = Pick<NewPassage, "text" | "bookTitle" | "author">;
+type ReplayCard = { passage: Passage; key: string };
+
+const REPLAY_BATCH_SIZE = 10;
+const REPLAY_HISTORY_LIMIT = 60;
 
 // Keep the original keys so the rename preserves existing browser data.
 const SAVED_KEY = "merak:saved";
 const THEME_KEY = "merak:theme";
 const LAST_KEY = "merak:last";
-const NAME_KEY = "merak:name";
+
+function shufflePassages(passages: Passage[], lastId?: string): Passage[] {
+  const shuffled = [...passages];
+  for (let index = shuffled.length - 1; index > 0; index--) {
+    const other = Math.floor(Math.random() * (index + 1));
+    [shuffled[index], shuffled[other]] = [shuffled[other], shuffled[index]];
+  }
+  if (shuffled.length > 1 && shuffled[0].id === lastId) {
+    const other = 1 + Math.floor(Math.random() * (shuffled.length - 1));
+    [shuffled[0], shuffled[other]] = [shuffled[other], shuffled[0]];
+  }
+  return shuffled;
+}
 
 function readSaved(): string[] {
   try {
@@ -41,11 +58,32 @@ function ThemeIcon({ theme }: { theme: Theme }) {
     : <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4" /><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4" /></svg>;
 }
 
+function BackIcon() {
+  return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M19 12H5m0 0 6-6m-6 6 6 6" /></svg>;
+}
+
+function passageDensity(text: string) {
+  return text.length > 520 ? "dense" : text.length > 420 ? "long" : "normal";
+}
+
+function PassageCopy({ text, contributorName, curated }: Pick<Passage, "text" | "contributorName"> & { curated?: boolean }) {
+  return <div className="passage-copy">
+    <p className="contributor">{curated ? "Tomar seçkisi" : contributorName === "Okur" ? "Bir okurun seçkisi" : `Paylaşan: ${contributorName}`}</p>
+    <p className="excerpt">{text}</p>
+  </div>;
+}
+
+function PassageSource({ bookTitle, author }: Pick<Passage, "bookTitle" | "author">) {
+  return <><strong>{bookTitle}</strong><span className="source-meta"><span className="source-label">Yazar</span><span className="source-author">{author}</span></span></>;
+}
+
 function App() {
   const [view, setView] = useState<View>("feed");
   const [theme, setTheme] = useState<Theme>(initialTheme);
-  const [draft, setDraft] = useState<NewPassage>(() => ({ text: "", bookTitle: "", author: "", translator: "", sourceUrl: "", contributorName: localStorage.getItem(NAME_KEY) ?? "" }));
+  const [draft, setDraft] = useState<PassageDraft>({ text: "", bookTitle: "", author: "" });
+  const [publishing, setPublishing] = useState(false);
   const [passages, setPassages] = useState<Passage[]>([]);
+  const [replayCards, setReplayCards] = useState<ReplayCard[]>([]);
   const [savedIds, setSavedIds] = useState<string[]>(readSaved);
   const [savedPassages, setSavedPassages] = useState<Passage[]>([]);
   const [nextCursor, setNextCursor] = useState<string | null>(null);
@@ -64,6 +102,9 @@ function App() {
   const feedRef = useRef<HTMLDivElement>(null);
   const restoredRef = useRef(false);
   const pendingScrollRef = useRef<string | null>(null);
+  const visibleCardRef = useRef<string | null>(null);
+  const replayQueueRef = useRef<Passage[]>([]);
+  const replayKeyRef = useRef(0);
   const loadingMoreRef = useRef(false);
   const dockDragStartRef = useRef<number | null>(null);
   const suppressDockClickRef = useRef(false);
@@ -85,6 +126,8 @@ function App() {
         if (linked) page.items.unshift(linked);
       }
       setPassages(page.items);
+      setReplayCards([]);
+      replayQueueRef.current = [];
       setNextCursor(page.nextCursor);
     } catch (cause) {
       setError(cause instanceof Error ? cause.message : "Pasajlar yüklenemedi.");
@@ -108,17 +151,20 @@ function App() {
     const observer = new IntersectionObserver(entries => {
       const visible = entries.filter(entry => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
       const id = visible?.target.getAttribute("data-passage-id");
-      if (id) localStorage.setItem(LAST_KEY, id);
+      if (id && visible) {
+        visibleCardRef.current = visible.target.id;
+        localStorage.setItem(LAST_KEY, id);
+      }
     }, { root: feedRef.current, threshold: 0.65 });
     feedRef.current.querySelectorAll("[data-passage-id]").forEach(element => observer.observe(element));
     return () => observer.disconnect();
-  }, [view, passages]);
+  }, [view, passages, replayCards]);
 
   useEffect(() => {
     if (view !== "feed" || !pendingScrollRef.current) return;
     const id = pendingScrollRef.current;
     pendingScrollRef.current = null;
-    requestAnimationFrame(() => document.getElementById(`pasaj-${id}`)?.scrollIntoView());
+    requestAnimationFrame(() => document.getElementById(id)?.scrollIntoView());
   }, [view, passages]);
 
   useEffect(() => {
@@ -134,7 +180,19 @@ function App() {
   }, [selected, shareData, shareZoomed]);
 
   async function loadMore() {
-    if (!nextCursor || loadingMoreRef.current) return;
+    if (loadingMoreRef.current || loading || !passages.length) return;
+    if (!nextCursor) {
+      if (replayQueueRef.current.length === 0) {
+        const lastId = replayCards.at(-1)?.passage.id ?? passages.at(-1)?.id;
+        replayQueueRef.current = shufflePassages(passages, lastId);
+      }
+      const batch = replayQueueRef.current.splice(0, REPLAY_BATCH_SIZE).map(passage => ({
+        passage,
+        key: `tekrar-${++replayKeyRef.current}`,
+      }));
+      setReplayCards(current => [...current, ...batch].slice(-REPLAY_HISTORY_LIMIT));
+      return;
+    }
     loadingMoreRef.current = true;
     setLoadingMore(true);
     try {
@@ -173,8 +231,10 @@ function App() {
     setView("feed");
     setSelected(null);
     if (id) {
-      pendingScrollRef.current = id;
+      pendingScrollRef.current = `pasaj-${id}`;
       setPassages(current => current.some(item => item.id === id) ? current : [...savedPassages.filter(item => item.id === id), ...current]);
+    } else if (view !== "feed") {
+      pendingScrollRef.current = visibleCardRef.current;
     }
   }
 
@@ -230,14 +290,18 @@ function App() {
     }
   }
 
-  async function publish(input: NewPassage) {
-    const created = await publishPassage(input);
-    localStorage.setItem(NAME_KEY, input.contributorName);
-    setDraft({ text: "", bookTitle: "", author: "", translator: "", sourceUrl: "", contributorName: input.contributorName });
-    setPassages(current => [created, ...current]);
-    setView("feed");
-    setNotice(isDemo ? "Pasaj bu tarayıcıya kaydedildi." : "Pasajın yayınlandı.");
-    pendingScrollRef.current = created.id;
+  async function publish(input: PassageDraft) {
+    setPublishing(true);
+    try {
+      const created = await publishPassage({ ...input, translator: "", sourceUrl: "", contributorName: "" });
+      setDraft({ text: "", bookTitle: "", author: "" });
+      setPassages(current => [created, ...current]);
+      setView("feed");
+      setNotice(isDemo ? "Pasaj bu tarayıcıya kaydedildi." : "Pasajın yayımlandı.");
+      pendingScrollRef.current = `pasaj-${created.id}`;
+    } finally {
+      setPublishing(false);
+    }
   }
 
   async function sendReport(event: FormEvent<HTMLFormElement>) {
@@ -258,7 +322,7 @@ function App() {
   }
 
   function dock() {
-    return <nav className="bottom-dock" aria-label="Ana işlemler">
+    return <nav className={view === "feed" ? "bottom-dock" : "bottom-dock bottom-dock--with-back"} aria-label="Ana işlemler">
       <div className={`dock-switch dock-switch--${view}`} aria-label="Ekle ve kaydedilenler arasında geç" onPointerDown={event => { dockDragStartRef.current = event.clientX; }} onPointerUp={event => {
         if (dockDragStartRef.current === null) return;
         const distance = event.clientX - dockDragStartRef.current;
@@ -278,7 +342,8 @@ function App() {
         <button className="dock-tab" type="button" aria-pressed={view === "submit"} onClick={() => setView("submit")}><span className="dock-plus" aria-hidden="true">+</span><span>Ekle</span></button>
         <button className="dock-tab" type="button" aria-pressed={view === "saved"} onClick={() => void openSaved()}><BookmarkIcon /><span>Kaydedilenler</span></button>
       </div>
-      <button className="dock-theme" type="button" onClick={() => setTheme(current => current === "light" ? "dark" : "light")} aria-label={theme === "light" ? "Koyu temaya geç" : "Açık temaya geç"}><ThemeIcon theme={theme} /></button>
+      <button className="dock-icon" type="button" onClick={() => setTheme(current => current === "light" ? "dark" : "light")} aria-label={theme === "light" ? "Koyu temaya geç" : "Açık temaya geç"}><ThemeIcon theme={theme} /></button>
+      {view !== "feed" && <button className="dock-icon" type="button" onClick={() => returnToFeed()} disabled={view === "submit" && publishing} aria-label="Akışa dön" title="Akışa dön"><BackIcon /></button>}
     </nav>;
   }
 
@@ -290,18 +355,14 @@ function App() {
       {loading && <section className="page state-page"><div className="state-message">Pasajlar yükleniyor…</div></section>}
       {!loading && error && <section className="page state-page"><div className="state-message"><p>{error}</p><button className="secondary-button" onClick={() => void loadFirst()}>Tekrar dene</button></div></section>}
       {!loading && !error && passages.length === 0 && <section className="page state-page"><div className="state-message"><h1>İlk pasajı sen paylaş.</h1><p>Aklında kalan bir bölümü akışa ekleyebilirsin.</p><button className="primary-button" onClick={() => setView("submit")}>Pasaj ekle</button></div></section>}
-      {!loading && passages.map(passage => <article className="page passage-page" id={`pasaj-${passage.id}`} data-passage-id={passage.id} data-density={passage.text.length > 520 ? "dense" : passage.text.length > 420 ? "long" : "normal"} key={passage.id}>
+      {!loading && [...passages.map(passage => ({ passage, key: `pasaj-${passage.id}` })), ...replayCards].map(({ passage, key }) => <article className="page passage-page" id={key} data-passage-id={passage.id} data-density={passageDensity(passage.text)} key={key}>
         {isDemo && <span className="demo-label">Yerel önizleme</span>}
         <div className="reading-area">
-          <div className="passage-copy">
-            <p className="contributor">{passage.curated ? "Tomar seçkisi" : passage.contributorName === "Okur" ? "Bir okurun seçkisi" : `Paylaşan: ${passage.contributorName}`}</p>
-            <p className="excerpt">{passage.text}</p>
-          </div>
+          <PassageCopy text={passage.text} contributorName={passage.contributorName} curated={passage.curated} />
         </div>
         <footer className="passage-footer">
           <button className="source-button" type="button" onClick={() => setSelected(passage)}>
-            <strong>{passage.bookTitle}</strong>
-            <span className="source-meta"><span className="source-label">Yazar</span><span className="source-author">{passage.author}</span></span>
+            <PassageSource bookTitle={passage.bookTitle} author={passage.author} />
           </button>
           <div className="footer-actions">
             <button className="icon-button" type="button" onClick={() => toggleSaved(passage.id)} aria-label={savedIds.includes(passage.id) ? "Kaydı kaldır" : "Pasajı kaydet"}><BookmarkIcon filled={savedIds.includes(passage.id)} /></button>
@@ -312,7 +373,7 @@ function App() {
       {!loading && loadingMore && <p className="feed-status">Yeni pasajlar yükleniyor…</p>}
     </main>}
 
-    {view === "submit" && <SubmitPage input={draft} onChange={setDraft} onPublish={publish} />}
+    {view === "submit" && <SubmitPage input={draft} onChange={setDraft} onPublish={publish} busy={publishing} />}
 
     {view === "saved" && <main className="single-view"><section className="page list-page">
       <div className="list-content"><h1>Kaydedilenler</h1>{savedPassages.length === 0 ? <p>Henüz pasaj kaydetmedin.</p> : <ul>{savedPassages.map(passage => <li key={passage.id}><button type="button" onClick={() => returnToFeed(passage.id)}><span>{passage.text}</span><small>{passage.bookTitle} · {passage.author}</small></button></li>)}</ul>}</div>
@@ -341,34 +402,59 @@ function App() {
   </>;
 }
 
-function SubmitPage({ input, onChange, onPublish }: { input: NewPassage; onChange: React.Dispatch<React.SetStateAction<NewPassage>>; onPublish: (input: NewPassage) => Promise<void> }) {
-  const [busy, setBusy] = useState(false);
+function SubmitPage({ input, onChange, onPublish, busy }: {
+  input: PassageDraft;
+  onChange: React.Dispatch<React.SetStateAction<PassageDraft>>;
+  onPublish: (input: PassageDraft) => Promise<void>;
+  busy: boolean;
+}) {
   const [error, setError] = useState("");
+  const previewRef = useRef<HTMLDialogElement>(null);
+  const draftText = input.text.trim();
 
-  function change(field: keyof NewPassage, value: string) { onChange(current => ({ ...current, [field]: value })); }
+  function change(field: keyof PassageDraft, value: string) { onChange(current => ({ ...current, [field]: value })); }
 
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setBusy(true);
     setError("");
     try { await onPublish(input); }
-    catch (cause) { setError(cause instanceof Error ? cause.message : "Pasaj yayınlanamadı."); }
-    finally { setBusy(false); }
+    catch (cause) { setError(cause instanceof Error ? cause.message : "Pasaj yayımlanamadı."); }
   }
 
   return <main className="single-view"><section className="page submit-page">
     <form className="submit-content" onSubmit={event => void submit(event)}>
-      <h1>Bir pasaj paylaş</h1><p className="submit-intro">Okurken dönüp yeniden baktığın bir bölümü ekle.</p>
-      <label>Pasaj<textarea required minLength={80} maxLength={1600} value={input.text} onChange={event => change("text", event.target.value)} placeholder="Metni buraya yaz…" /></label>
-      <label>Kitap adı<input required maxLength={160} value={input.bookTitle} onChange={event => change("bookTitle", event.target.value)} /></label>
-      <label>Yazar<input required maxLength={120} value={input.author} onChange={event => change("author", event.target.value)} /></label>
-      <label>Çevirmen <span>(varsa)</span><input maxLength={120} value={input.translator} onChange={event => change("translator", event.target.value)} /></label>
-      <label>Metin bağlantısı <span>(varsa)</span><input type="url" maxLength={500} value={input.sourceUrl} onChange={event => change("sourceUrl", event.target.value)} placeholder="https://…" /></label>
-      <label>Paylaşan adın <span>(isteğe bağlı)</span><input maxLength={60} value={input.contributorName} onChange={event => change("contributorName", event.target.value)} placeholder="Okur" /></label>
+      <h1>Pasaj ekle</h1>
+      <p className="submit-intro">Okurken dönüp yeniden baktığın bir bölümü paylaş.</p>
+      <div className="submit-editor">
+        <div className="submit-editor-heading">
+          <label htmlFor="draft-text">Pasaj</label>
+          <span id="draft-length">80–1600 karakter</span>
+        </div>
+        <textarea id="draft-text" aria-describedby="draft-length" required minLength={80} maxLength={1600} value={input.text} onChange={event => change("text", event.target.value)} placeholder="Kitaptan bir bölüm yaz…" />
+      </div>
+      <div className="submit-fields">
+        <label>Kitap adı<input required maxLength={160} value={input.bookTitle} onChange={event => change("bookTitle", event.target.value)} /></label>
+        <label>Yazar<input required maxLength={120} value={input.author} onChange={event => change("author", event.target.value)} /></label>
+      </div>
       {error && <p className="form-error" role="alert">{error}</p>}
-      <button className="primary-button" type="submit" disabled={busy}>{busy ? "Yayınlanıyor…" : "Pasajı yayınla"}</button>
-      <p className="form-note">{isDemo ? "Önizlemede paylaşım yalnızca bu tarayıcıda görünür." : "Paylaşımın akışta hemen görünür. Kitap ve yazar bilgisini doğru yaz."}</p>
+      <div className="submit-actions">
+        <button className="primary-button" type="submit" disabled={busy}>{busy ? "Yayımlanıyor…" : "Pasajı yayımla"}</button>
+        <button className="secondary-button" type="button" disabled={!draftText || busy} onClick={() => previewRef.current?.showModal()}>Önizle</button>
+      </div>
+      <p className="form-note">{isDemo ? "Yerel demoda paylaşım yalnızca bu tarayıcıda görünür." : "Paylaşımın akışta hemen görünür. Kitap ve yazar bilgisini doğru yaz."}</p>
     </form>
+    <dialog ref={previewRef} className="passage-preview" data-density={passageDensity(draftText)} aria-labelledby="passage-preview-title">
+      <header className="passage-preview-header">
+        <h2 id="passage-preview-title">Akış önizlemesi</h2>
+        <button className="icon-button" type="button" onClick={() => previewRef.current?.close()} aria-label="Önizlemeyi kapat">×</button>
+      </header>
+      <div className="reading-area" tabIndex={0} aria-label="Taslak pasaj">
+        <PassageCopy text={draftText} contributorName="Okur" />
+      </div>
+      <footer className="passage-footer">
+        <div className="source-button"><PassageSource bookTitle={input.bookTitle.trim() || "Kitap adı"} author={input.author.trim() || "—"} /></div>
+      </footer>
+    </dialog>
   </section></main>;
 }
 
