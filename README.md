@@ -1,68 +1,86 @@
 # Tomar
 
-Kitap pasajlarını okumak ve paylaşmak için mobil öncelikli web uygulaması.
+Tomar, Türkçe ve dünya edebiyatından kitap pasajlarını keşfetmek ve paylaşmak için mobil öncelikli bir web uygulaması. Her ekranda bir pasaj var. Kaydırarak okumaya devam edebilir, beğendiğin pasajı kaydedebilir veya kitap ve yazar bilgileriyle birlikte kendi seçtiğin bir bölümü akışa ekleyebilirsin.
 
-## Teknoloji
+[Canlı uygulamayı aç](https://tomar.169-58-194-231.sslip.io/)
 
-- React, Vite, TypeScript ve özel CSS
-- Fastify ile Node.js API
-- PostgreSQL: ortak pasaj akışı ve içerik bildirimleri
-- Tarayıcı depolaması: kaydedilen pasajlar, tema ve kaldığın yer
+## Ekran görüntüleri
+
+| Ana akış | Pasaj ekle | Kaydedilenler |
+| :---: | :---: | :---: |
+| [![Açık temada pasaj okuma ekranı](docs/screenshots/01-ana-akis.jpg)](docs/screenshots/01-ana-akis.jpg) | [![Pasaj, kitap adı ve yazar alanlarının bulunduğu form](docs/screenshots/02-pasaj-ekle.jpg)](docs/screenshots/02-pasaj-ekle.jpg) | [![Kaydedilen pasajların listesi](docs/screenshots/03-kaydedilenler.jpg)](docs/screenshots/03-kaydedilenler.jpg) |
+
+<details>
+<summary>Kaynak, paylaşım ve diğer ekranları göster</summary>
+
+| Pasaj önizleme | Pasaj kaynağı | Pasaj bildir |
+| :---: | :---: | :---: |
+| [![Gönderinin akışta nasıl görüneceği](docs/screenshots/04-pasaj-onizleme.jpg)](docs/screenshots/04-pasaj-onizleme.jpg) | [![Kitap, yazar, çevirmen ve özgün metin bağlantısı](docs/screenshots/05-pasaj-kaynagi.jpg)](docs/screenshots/05-pasaj-kaynagi.jpg) | [![Bildirim nedeni ve açıklama alanı](docs/screenshots/06-pasaj-bildir.jpg)](docs/screenshots/06-pasaj-bildir.jpg) |
+
+| Paylaşım görseli | Koyu tema | Büyük paylaşım önizlemesi |
+| :---: | :---: | :---: |
+| [![Paylaşım kartı ve indirme seçenekleri](docs/screenshots/07-paylasim-gorseli.jpg)](docs/screenshots/07-paylasim-gorseli.jpg) | [![Koyu temada pasaj okuma ekranı](docs/screenshots/08-koyu-tema.jpg)](docs/screenshots/08-koyu-tema.jpg) | [![Üretilen paylaşım kartının büyük önizlemesi](docs/screenshots/09-paylasim-buyuk-onizleme.jpg)](docs/screenshots/09-paylasim-buyuk-onizleme.jpg) |
+
+</details>
+
+## Nasıl çalışır?
+
+- **Oku.** Tomar seçkisi ve okur gönderileri aynı dikey akışta ayrı etiketlerle görünür. Akışın sonuna gelindiğinde pasajlar karışık sırayla yeniden gösterilir.
+- **Ekle.** Kitap adı ve yazarıyla birlikte 80–1600 karakterlik bir pasaj gir. Önizlemeden sonra hesap açmadan yayımlayabilirsin. Gönderin ortak akışta bir okur seçkisi olarak görünür.
+- **Kaydet.** Kaydettiklerin, tema tercihin ve kaldığın pasaj tarayıcıda saklanır.
+- **Paylaş.** Bir pasajı PNG kart olarak indir veya doğrudan o pasaja açılan bağlantıyı kopyala. Destekleyen cihazlarda kartı paylaşım menüsünden de gönderebilirsin.
+- **Kaynağa bak.** Kitap adına dokunarak yazar, varsa çevirmen ve metnin kaynak bağlantısını görebilirsin. Aynı ekrandan yanlış kaynak, telif veya spam bildirimi gönderebilirsin.
+
+## Kullanılan teknolojiler
+
+| Katman | Teknoloji | Görevi |
+| --- | --- | --- |
+| Web arayüzü | React, TypeScript, Vite, CSS, Source Serif 4 | Pasaj akışı, gönderi formu, önizleme ve temalar |
+| API | Node.js, Fastify, `pg` | Akışı sayfalar halinde sunar, gönderileri ve bildirimleri doğrulayıp PostgreSQL'e yazar |
+| Veri | PostgreSQL ve `localStorage` | PostgreSQL ortak pasajları ve bildirimleri, tarayıcı ise kişisel okuma tercihlerini saklar |
+| Paylaşım | Canvas API | Pasajı ve kaynak bilgisini tarayıcıda PNG karta dönüştürür |
+| Yayın | Docker ve Caddy | Uygulama konteynerde çalışır, Caddy HTTPS trafiğini Tomar'a iletir |
 
 ## Yerelde çalıştırma
 
-Node.js 22+ ile sadece arayüzü görmek için PostgreSQL gerekmez:
+Node.js 22.12+ ve npm gerekir.
 
-```powershell
-npm install
+### Hızlı önizleme
+
+```sh
+npm ci
 npm run dev:demo
 ```
 
-`http://127.0.0.1:5173` adresini açın. Önizleme, `content/curated-passages.json` içindeki gerçek kitap seçkisini gösterir. Önizlemede eklenen pasajlar ve bildirimler yalnızca o tarayıcıda saklanır; diğer kullanıcılara gitmez.
+Tarayıcıda [yerel önizlemeyi](http://127.0.0.1:5173/) aç. Bu mod seçki dosyasından okur. Eklediğin pasajlar ve gönderdiğin bildirimler o tarayıcıda kalır. PostgreSQL kurulumu gerekmez.
 
-Ortak akış ve gerçek bildirimlerle çalıştırmak için PostgreSQL gerekir. Bu bilgisayardaki PostgreSQL 18 kurulumu için proje kökünde:
+### PostgreSQL ile tam kurulum
 
-```powershell
-npm run db:local
+Bağımlılıkları `npm ci` ile kur ve yerel PostgreSQL bağlantısını hazırla.
+
+- **Docker Compose.** Proje kökünde `.env.example` dosyasını `.env` olarak kopyala ve `docker compose up -d db` komutunu çalıştır.
+- **Mevcut PostgreSQL.** `.env.example` dosyasını `.env` olarak kopyala ve `DATABASE_URL` değerine kendi bağlantı adresini yaz.
+- **Windows'ta PostgreSQL 18.** `npm run db:local` ile 5433 portunda projeye özel bir veritabanı başlatabilirsin. Betik, `.env` dosyası henüz yoksa bağlantı ayarlarıyla birlikte oluşturur.
+
+PostgreSQL hazır olduğunda seçkiyi yükle ve uygulamayı başlat.
+
+```sh
+npm run seed:curated
 npm run dev
 ```
 
-`db:local`, mevcut PostgreSQL servisine dokunmadan proje klasöründeki `.local/` altında ayrı bir UTF-8 veritabanı başlatır, 5433 portunu kullanır ve `.env` dosyasını oluşturur. Kullanıcıların eklediği pasajlar bu veritabanında saklanır.
+Web arayüzü `http://127.0.0.1:5173`, API `http://127.0.0.1:3001` üzerinden çalışır. Şema otomatik hazırlanır.
 
-Docker Desktop çalışıyorsa alternatif olarak:
+## İçerik ve geliştirme
 
-```powershell
-docker compose up -d db
-Copy-Item .env.example .env
-npm install
-npm run dev
-```
+- [Seçki dosyası](content/curated-passages.json) pasaj metnini, eser ve yazar bilgisini, varsa çevirmeni ve kaynak bağlantısını içerir. `npm run seed:curated` aynı metni ve yazarı tekrar eklemez. İnceleme bekleyen eserler [hak kuyruğunda](content/rights-queue.md) tutulur.
+- [Arayüz](src/) React bileşenlerini, demo modunu ve paylaşım kartı üretimini içerir. [Sunucu](server/) API'yi, PostgreSQL şemasını, içerik yükleme ve moderasyon komutlarını içerir.
 
-Web arayüzü `http://127.0.0.1:5173` adresinde açılır. API `http://127.0.0.1:3001` adresindedir. Docker kullanmıyorsanız kendi PostgreSQL sunucunuzun bağlantısını `.env` içindeki `DATABASE_URL` değerine yazın. API ilk açılışta `server/schema.sql` şemasını oluşturur.
-
-İlk kurulumda gerçek kitap seçkisini yüklemek için `npm run seed:curated` çalıştırın. Komut tekrar çalıştırıldığında aynı pasajları çoğaltmaz ve eski uydurma örnekleri yayından kaldırır. Seçkide pasaj metni, kitap/yazar adı, varsa çevirmen, özgün metin bağlantısı ve hak araştırması bağlantısı tutulur. Türkçe eserler özgün metinlerden seçilir. Shakespeare ve Machiavelli pasajları özgün dillerinden Tomar için çevrilmiş seçki taslaklarıdır; yayımlanmış modern Türkçe çevirilerden alınmamıştır. Yayın öncesinde çeviri ve kaynak bilgileri editör tarafından son kez karşılaştırılmalıdır. Koruma süresi ve işlenme eserlerin bağımsızlığı için [Kültür ve Turizm Bakanlığı açıklamasına](https://telifhaklari.ktb.gov.tr/TR-332373/telif-hakki-kac-yil-sureyle-korunur.html) bakın.
-
-Yeni seçki için ölçü: pasaj tek başına okununca anlamlı bir düşünce, duygu veya karakter taşımalı; metin özgün kaynaktan karşılaştırılmalı; kitap, yazar ve açılabilir kaynak bağlantısı bulunmalı. Uzunluk tek başına kalite ölçüsü değildir; anlamlı kısa pasaj da alınır. Yazarı ve çeviriyi ayrı ayrı hak yönünden kontrol edin. Yalnızca akışı doldurmak için kısa, bağlamsız cümleler eklemeyin. Tanpınar için yayın bekleme notları [hak kuyruğunda](content/rights-queue.md). Okurlar paylaşım yaparken isteğe bağlı HTTPS metin bağlantısı ekleyebilir. Bu gönderiler akışta Tomar seçkisinden ayrı işaretlenir ve kaynak doğrulaması yapılmış içerik olarak sunulmaz.
-
-## Kontroller ve üretim derlemesi
-
-```powershell
+```sh
 npm run check
 npm test
 npm run build
 npm start
 ```
 
-Üretimde API'yi ters vekil sunucunun arkasında çalıştırın. Vekil dışında doğrudan erişim kapalıysa `TRUST_PROXY=true` ayarlayın; böylece gönderi hız sınırı ziyaretçinin IP adresini kullanır. PostgreSQL verisini kalıcı depolamada tutup düzenli yedekleyin. Bağımlılıklar `package-lock.json` ile sabitlenir.
-
-## İçerik bildirimleri
-
-Okurlar pasajın kaynak kartından telif, spam veya yanlış kaynak bildirimi gönderebilir. Sunucu operatörü bildirimleri ve kaldırma işlemlerini şu komutlarla yönetir:
-
-```powershell
-npm run moderate -- list
-npm run moderate -- remove 12
-npm run moderate -- resolve 5
-```
-
-Bu komutlar `npm run build` sonrasında, `.env` ve PostgreSQL bağlantısı hazırken çalışır. Kullanıcı gönderileri doğrudan yayınlanır; başlangıçta hesap açma veya manuel ön onay yoktur.
+`npm start` üretim derlemesini `.env` içindeki PostgreSQL bağlantısıyla çalıştırır. Derlemeden sonra `npm run moderate -- list` açık bildirimleri listeler. `npm run moderate -- remove <pasaj-id>` pasajı yayından kaldırır ve ilgili bildirimleri kapatır. `npm run moderate -- resolve <bildirim-id>` bildirimi kapatır.
