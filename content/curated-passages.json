@@ -1,5 +1,983 @@
 [
   {
+    "demoId": "200",
+    "text": "Ama aynı kişi değilsem, asıl soru şu: Dünyada ben kimim? İşte büyük bilmece de bu! Sonra kendi yaşında tanıdığı bütün çocukları düşündü. Acaba onlardan birine dönüşmüş olabilir miydi?",
+    "bookTitle": "Alice Harikalar Diyarında",
+    "author": "Lewis Carroll",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/11/pg11-images.html",
+    "sourceNote": "II. bölüm, Alice değişen boyunun kimliği hakkında düşündürdüklerini tartar. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/11"
+  },
+  {
+    "demoId": "199",
+    "text": "“Ne yavaş bir ülkeymiş!” dedi Kraliçe. “Burada, gördüğün gibi, aynı yerde kalabilmek için bütün gücünle koşman gerekir. Başka bir yere varmak istiyorsan en az iki kat hızlı koşmalısın!”",
+    "bookTitle": "Aynanın İçinden",
+    "author": "Lewis Carroll",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/12/pg12-images.html",
+    "sourceNote": "II. bölüm, Kırmızı Kraliçe Alice’e bu ülkenin koşu kuralını anlatır. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/12"
+  },
+  {
+    "demoId": "198",
+    "text": "Biri dışında bütün çocuklar büyür. Büyüyeceklerini de çok geçmeden öğrenirler. Wendy bunu şöyle öğrendi: İki yaşındayken bahçede oynuyor, kopardığı bir çiçeği annesine götürüyordu. Öyle sevimli görünmüş olmalı ki annesi elini kalbine götürüp, “Ah, hep böyle kalabilsen!” diye seslendi.",
+    "bookTitle": "Peter Pan",
+    "author": "J. M. Barrie",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/16/pg16-images.html",
+    "sourceNote": "I. bölüm, Wendy’nin büyüyeceğini öğrendiği an. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/16"
+  },
+  {
+    "demoId": "197",
+    "text": "Gözden kaçırdığımız bir doğa yasası var: Değişim, tehlike ve güçlük karşısında zekâ esneklik kazanır. Çevresiyle tam uyum içindeki hayvan kusursuz bir makine gibidir. Doğa, alışkanlıkla içgüdü işe yaramaz hâle gelmedikçe zekâya başvurmaz.",
+    "bookTitle": "Zaman Makinesi",
+    "author": "H. G. Wells",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/35/pg35-images.html",
+    "sourceNote": "Zaman Gezgini’nin zekâ ve değişim üzerine düşüncesi. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/35"
+  },
+  {
+    "demoId": "196",
+    "text": "Mâi bir akşam\nEder üstünde daima ârâm;\nEteklerinde deniz\nDöker ervâha bir sükûn-ı menâm.",
+    "bookTitle": "O Belde",
+    "author": "Ahmet Haşim",
+    "sourceUrl": "https://tr.wikisource.org/wiki/O_Belde",
+    "sourceNote": "Hayal edilen beldenin deniz ve akşamla tasviri. Türkçe özgün metin.",
+    "rightsUrl": "https://tr.wikisource.org/wiki/Ki%C5%9Fi%3AAhmet_Ha%C5%9Fim"
+  },
+  {
+    "demoId": "195",
+    "text": "“Ah, Marilla,” diye seslendi bir cumartesi sabahı, kolları güzel dallarla dolu, dans eder gibi içeri girerken. “Ekim aylarının olduğu bir dünyada yaşadığıma ne kadar seviniyorum! Eylülden kasıma birden geçiverseydik çok kötü olmaz mıydı? Şu akçaağaç dallarına bak. İçini kıpır kıpır etmiyorlar mı?”",
+    "bookTitle": "Yeşilin Kızı Anne",
+    "author": "L. M. Montgomery",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/45/pg45-images.html",
+    "sourceNote": "Anne’in bir ekim sabahı Marilla’ya getirdiği dallar. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/45"
+  },
+  {
+    "demoId": "194",
+    "text": "Noel’i kalbimde yaşatacağım, hem de bütün yıl boyunca. Geçmişte, bugünde ve gelecekte yaşayacağım. Üçünün ruhu da içimde çalışacak. Bana öğrettiklerine yüz çevirmeyeceğim. Ah, şu taşın üstündeki yazıyı silebileceğimi söyleyin!",
+    "bookTitle": "Bir Noel Şarkısı",
+    "author": "Charles Dickens",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/46/pg46-images.html",
+    "sourceNote": "Scrooge’un geleceği gördükten sonra verdiği söz. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/46"
+  },
+  {
+    "demoId": "193",
+    "text": "Gördüklerim midemi bulandırdı. O zavallı düzenbazlara acıdım. Artık dünyada onlara karşı en ufak bir öfke bile duyamayacakmışım gibi geldi. Korkunç bir manzaraydı. İnsanlar birbirlerine korkunç derecede acımasız davranabiliyor.",
+    "bookTitle": "Huckleberry Finn’in Maceraları",
+    "author": "Mark Twain",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/76/pg76-images.html",
+    "sourceNote": "Huck’ın kasabalıların iki adama davranışını gördüğü sahne. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/76"
+  },
+  {
+    "demoId": "192",
+    "text": "Birbirimizin hayatını biraz olsun kolaylaştırmayacaksak ne diye yaşıyoruz? Zor günümde bana yol gösteren, hastayken benimle ilgilenen bir insanın derdine kayıtsız kalamam.",
+    "bookTitle": "Middlemarch",
+    "author": "George Eliot",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/145/pg145-images.html",
+    "sourceNote": "Dorothea, Lydgate’e destek olma gerekçesini açıklar. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/145"
+  },
+  {
+    "demoId": "191",
+    "text": "İşveyle, fısıltıyla, gülüşle\nOlmuş şeb-i sevda yine bîhâp;\nOklar gibi saplanmada kalbe,\nDüştükçe semadan yere mehtâp...",
+    "bookTitle": "Bir Yaz Gecesi Hatırası",
+    "author": "Ahmet Haşim",
+    "sourceUrl": "https://tr.wikisource.org/wiki/Bir_Yaz_Gecesi_Hat%C4%B1ras%C4%B1",
+    "sourceNote": "İlk dört dize. Türkçe özgün metin.",
+    "rightsUrl": "https://tr.wikisource.org/wiki/Ki%C5%9Fi%3AAhmet_Ha%C5%9Fim"
+  },
+  {
+    "demoId": "190",
+    "text": "Sıradan insan hayatının her ayrıntısını görebilse, hissedebilseydik, otların büyümesini, sincabın kalp atışını duyar gibi olurduk. Sessizliğin öte yanındaki o uğultuya dayanamaz, ölürdük. Oysa en uyanığımız bile kalın bir anlayışsızlık tabakasıyla sarılı dolaşıyor.",
+    "bookTitle": "Middlemarch",
+    "author": "George Eliot",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/145/pg145-images.html",
+    "sourceNote": "Anlatıcının sıradan hayatların görünmeyen ayrıntıları üzerine düşüncesi. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/145"
+  },
+  {
+    "demoId": "189",
+    "text": "Bayan Pontellier içini dökmeye alışık bir kadın değildi. Daha çocukken bile kendi küçük hayatını içinde yaşamıştı. Çok erken yaşta iki ayrı hayatın varlığını sezmişti: Uyum sağlayan dış hayat ve soru soran iç hayat.",
+    "bookTitle": "Uyanış",
+    "author": "Kate Chopin",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/160/pg160-images.html",
+    "sourceNote": "Edna’nın çocukluğundan beri sezdiği iki ayrı hayat. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/160"
+  },
+  {
+    "demoId": "188",
+    "text": "Bay Pontellier zaman zaman karısının dengesini yitirip yitirmediğini düşünürdü. Kendisi gibi davranmadığı apaçıktı. Oysa onun giderek kendisi olduğunu, dünyaya görünmek için bir giysi gibi giydiğimiz o sahte benliği her gün biraz daha üzerinden attığını göremiyordu.",
+    "bookTitle": "Uyanış",
+    "author": "Kate Chopin",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/160/pg160-images.html",
+    "sourceNote": "Bay Pontellier, Edna’daki değişimi anlamaya çalışır. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/160"
+  },
+  {
+    "demoId": "187",
+    "text": "Boşlukta denizler gibi yokluk ve karanlık\nSessiz uzatır tâ ebediyyetlere kollar...\nGuyâ o zaman, bildiğimiz yerdeki yollar\nBirden silinir, korkulu bir hisle adımlar",
+    "bookTitle": "Sensiz",
+    "author": "Ahmet Haşim",
+    "sourceUrl": "https://tr.wikisource.org/wiki/Sensiz_(Ahmet_Ha%C5%9Fim)",
+    "sourceNote": "Şiirin başında gece ve boşluk tasviri. Türkçe özgün metin.",
+    "rightsUrl": "https://tr.wikisource.org/wiki/Ki%C5%9Fi%3AAhmet_Ha%C5%9Fim"
+  },
+  {
+    "demoId": "186",
+    "text": "“Haydi, Edward, bunları şu an keyfin olmadığı için söylüyorsun. İçin karanlık, kendine benzemeyen herkesin mutlu olduğunu sanıyorsun. Ama insanın eğitimi, durumu ne olursa olsun dostlarından ayrılmanın acısını herkes zaman zaman duyar. Kendi mutluluğunu tanımayı öğren. İhtiyacın olan tek şey sabır. Daha çekici bir ad istersen ona umut de.”",
+    "bookTitle": "Akıl ve Tutku",
+    "author": "Jane Austen",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/161/pg161-images.html",
+    "sourceNote": "Edward’la konuşmada sabır ve umut. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/161"
+  },
+  {
+    "demoId": "185",
+    "text": "Bir insan arkadaşlarına ayak uyduramıyorsa, belki başka bir davulcuyu duyuyordur. Bırakın duyduğu müziğe göre adım atsın, ritmi ne kadar yavaş, sesi ne kadar uzaktan gelirse gelsin. Bir elma ağacı ya da bir meşe kadar çabuk olgunlaşmasının önemi yok.",
+    "bookTitle": "Walden",
+    "author": "Henry David Thoreau",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/205/pg205-images.html",
+    "sourceNote": "Sonuç bölümü, insanın kendi ritmini bulması. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/205"
+  },
+  {
+    "demoId": "184",
+    "text": "Bu deneyden en azından şunu öğrendim: İnsan düşleri yönünde güvenle yürür, hayal ettiği hayatı yaşamaya çalışırsa sıradan zamanlarda aklına gelmeyecek bir başarıyla karşılaşır.",
+    "bookTitle": "Walden",
+    "author": "Henry David Thoreau",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/205/pg205-images.html",
+    "sourceNote": "Sonuç bölümü, göl kıyısındaki deneyden çıkarılan ders. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/205"
+  },
+  {
+    "demoId": "183",
+    "text": "Hayır, olanaksız. İnsan ömrünün herhangi bir dönemini yaşamanın nasıl bir şey olduğunu, o döneme gerçeğini ve anlamını veren o ince, içe işleyen özü bir başkasına aktaramaz. Olanaksız. Düş gördüğümüz gibi yaşarız: tek başımıza.",
+    "bookTitle": "Karanlığın Yüreği",
+    "author": "Joseph Conrad",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/219/pg219-images.html",
+    "sourceNote": "Marlow, yaşanan bir şeyin bütünüyle aktarılıp aktarılamayacağını sorgular. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/219"
+  },
+  {
+    "demoId": "182",
+    "text": "Sokaklarda seylabeler ağlaşır\nUfuk yaklaşır, yaklaşır, yaklaşır;\nBulutlar karardıkça zerrata bir\nAğır, muhtazır dalgalanmak gelir;",
+    "bookTitle": "Rübâb-ı Şikeste: Yağmur",
+    "author": "Tevfik Fikret",
+    "sourceUrl": "https://tr.wikisource.org/wiki/R%C3%BCb%C3%A2b-%C4%B1_%C5%9Eikeste/Ya%C4%9Fmur",
+    "sourceNote": "Sağanak altında sokağın görünüşü. Türkçe özgün metin.",
+    "rightsUrl": "https://tr.wikisource.org/wiki/Ki%C5%9Fi%3ATevfik_Fikret"
+  },
+  {
+    "demoId": "181",
+    "text": "“Uslu durursan onları okursun,” dedi yaşlı bey tatlılıkla. “Böylece yalnız dışlarına bakmaktan daha çok zevk alırsın. Bazıları için en azından. Öyle kitaplar vardır ki sırtlarıyla kapakları, en iyi yanlarıdır.”",
+    "bookTitle": "Oliver Twist",
+    "author": "Charles Dickens",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/730/pg730-images.html",
+    "sourceNote": "Kitapların dışına bakan Oliver’a verilen cevap. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/730"
+  },
+  {
+    "demoId": "180",
+    "text": "Söylemek istediğim şu: Hayatta neyi yapmaya çalıştıysam onu bütün yüreğimle iyi yapmaya çalıştım. Kendimi neye verdiysem bütünüyle verdim. Büyük işlerde de küçük işlerde de hep aynı ciddiyetle davrandım.",
+    "bookTitle": "David Copperfield",
+    "author": "Charles Dickens",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/766/pg766-images.html",
+    "sourceNote": "David, sonradan öğrendiği çalışma ilkesini anlatır. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/766"
+  },
+  {
+    "demoId": "179",
+    "text": "Linton’a sevgim ormanın yapraklarına benziyor. Zaman onu değiştirecek, bunu biliyorum, kışın ağaçları değiştirdiği gibi. Heathcliff’e sevgimse toprağın altındaki kalıcı kayalara benziyor. Pek haz verdiği söylenemez, ama onsuz olmaz.",
+    "bookTitle": "Uğultulu Tepeler",
+    "author": "Emily Brontë",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/768/pg768-images.html",
+    "sourceNote": "IX. bölüm, Catherine Linton’a ve Heathcliff’e duyduğu sevgiyi karşılaştırır. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/768"
+  },
+  {
+    "demoId": "178",
+    "text": "Bu harmanın gelir sonu, kapıştırın giderayak!\nYarın bakarsınız söner bugün çıtırdayan ocak!\nBugünkü mideler kavi, bugünkü çorbalar sıcak,\nAtıştırın, tıkıştırın, kapış kapış, çanak çanak...",
+    "bookTitle": "Han-ı Yağma",
+    "author": "Tevfik Fikret",
+    "sourceUrl": "https://tr.wikisource.org/wiki/Han-%C4%B1_Ya%C4%9Fma",
+    "sourceNote": "Şiirin son bendinden. Türkçe özgün metin.",
+    "rightsUrl": "https://tr.wikisource.org/wiki/Ki%C5%9Fi%3ATevfik_Fikret"
+  },
+  {
+    "demoId": "177",
+    "text": "Evlilik teklifini dün öğleden sonra saat beş buçukta etti. İsterseniz kendiniz de bakıp doğrulayabilirsiniz. Günlüğüm yanımda olmadan asla yolculuğa çıkmam. İnsan trende okuyacak heyecanlı bir şeyi her zaman yanında bulundurmalı.",
+    "bookTitle": "Ciddi Olmanın Önemi",
+    "author": "Oscar Wilde",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/844/pg844-images.html",
+    "sourceNote": "II. perde, Gwendolen günlüğünü çıkarır. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/844"
+  },
+  {
+    "demoId": "176",
+    "text": "Her yerde sis. Yeşil adacıkların ve çayırların arasından akan nehrin yukarılarında sis. Büyük, kirli şehrin rıhtımları, gemi sıraları ve suları kirleten kıyıları arasında yuvarlanan nehrin aşağılarında sis. Essex bataklıklarında sis, Kent tepelerinde sis.",
+    "bookTitle": "Kasvetli Ev",
+    "author": "Charles Dickens",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/1023/pg1023-images.html",
+    "sourceNote": "I. bölüm, Londra ve çevresindeki sisin açılış tasviri. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/1023"
+  },
+  {
+    "demoId": "175",
+    "text": "Türlü bitkilerle kaplı bir yamacı düşünmek ilginçtir. Çalılarda kuşlar öter, çeşitli böcekler uçuşur, solucanlar nemli toprağın içinde ilerler. Birbirinden bu kadar farklı ve birbirine böylesine karmaşık biçimlerde bağlı bu canlıların hepsi çevremizde işleyen yasaların ürünüdür.",
+    "bookTitle": "Türlerin Kökeni",
+    "author": "Charles Darwin",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/1228/pg1228-images.html",
+    "sourceNote": "Son bölüm, bitkilerle kaplı bir yamacın canlıları üzerine düşünce. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/1228"
+  },
+  {
+    "demoId": "174",
+    "text": "Kendime değer veriyorum. Ne kadar yalnız, ne kadar dostsuz, ne kadar desteksiz kalırsam kendime o kadar saygı göstereceğim. Yasalar ve ilkeler, insanın ayartılmadığı zamanlar için konulmaz. Benim şimdi yaşadığım anlar içindir.",
+    "bookTitle": "Jane Eyre",
+    "author": "Charlotte Brontë",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/1260/pg1260-images.html",
+    "sourceNote": "Jane, Rochester’ın yanında kalıp kalmamaya karar verir. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/1260"
+  },
+  {
+    "demoId": "173",
+    "text": "Hakir olduysa millet şanına noksan gelir sanma\nYere düşmekle cevher sakıt olmaz kadr ü kıymetten",
+    "bookTitle": "Hürriyet Kasidesi",
+    "author": "Namık Kemal",
+    "sourceUrl": "https://tr.wikisource.org/wiki/H%C3%BCrriyet_Kasidesi",
+    "sourceNote": "Cevher benzetmesini içeren beyit. Türkçe özgün metin.",
+    "rightsUrl": "https://tr.wikisource.org/wiki/Ki%C5%9Fi%3ANam%C4%B1k_Kemal"
+  },
+  {
+    "demoId": "172",
+    "text": "Gerçek şu ki Estella’yı sevdim, çünkü ona karşı koyamıyordum. Bunu çoğu zaman acıyla biliyordum: Aklıma, bana verilen sözlere, huzura, umuda, mutluluğa ve beni vazgeçirebilecek her şeye rağmen seviyordum onu.",
+    "bookTitle": "Büyük Umutlar",
+    "author": "Charles Dickens",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/1400/pg1400-images.html",
+    "sourceNote": "Pip’in Estella’ya duyduğu sevginin geriye dönük anlatımı. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/1400"
+  },
+  {
+    "demoId": "171",
+    "text": "Okuduğum kitaplarda, işittiğim hikâyelerde gerçek sevginin yolu hiç düz gitmedi. Ya sevenlerin soyları denk değildi ya yaşları. Bazen de sevilecek kişiyi dostlar seçerdi.",
+    "bookTitle": "Bir Yaz Gecesi Rüyası",
+    "author": "William Shakespeare",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/1514/pg1514-images.html",
+    "sourceNote": "I. perde, Lysander’ın Hermia’yı teselli ettiği konuşma. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/1514"
+  },
+  {
+    "demoId": "170",
+    "text": "“O zaman sizin için zindan sayılmaz,” dedi Hamlet. “Çünkü hiçbir şey kendi başına iyi ya da kötü değildir, onu öyle yapan düşüncedir. Benim için burası bir zindan.”",
+    "bookTitle": "Hamlet",
+    "author": "William Shakespeare",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/1524/pg1524-images.html",
+    "sourceNote": "II. perde, Hamlet ile Rosencrantz’ın Danimarka üzerine konuşması. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/1524"
+  },
+  {
+    "demoId": "169",
+    "text": "Ah böyle gezer mi hiç canan?\nGül değil arkasında kanlı kefen\nSen misin sen misin ey garib vatan!",
+    "bookTitle": "Vaveyla",
+    "author": "Namık Kemal",
+    "sourceUrl": "https://tr.wikisource.org/wiki/Vaveyla",
+    "sourceNote": "I. bölümün son üç dizesi. Türkçe özgün metin.",
+    "rightsUrl": "https://tr.wikisource.org/wiki/Ki%C5%9Fi%3ANam%C4%B1k_Kemal"
+  },
+  {
+    "demoId": "168",
+    "text": "Kıskançlıktan sakının efendim. O, beslendiği avla alay eden yeşil gözlü bir canavardır. Kaderini bilen ama kendisine haksızlık edeni sevmeyen aldatılmış adam, yine de mutludur.",
+    "bookTitle": "Othello",
+    "author": "William Shakespeare",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/1531/pg1531-images.html",
+    "sourceNote": "III. perde, Iago’nun Othello’ya kıskançlık üzerine sözleri. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/1531"
+  },
+  {
+    "demoId": "167",
+    "text": "“Görüyorsun ama gözlemlemiyorsun. Aradaki ayrım açık. Mesela holden bu odaya çıkan merdivenleri defalarca gördün. Peki kaç basamak var?” Ben bilmiyordum. “On yedi,” dedi Holmes. “Çünkü ben hem gördüm hem gözlemledim.”",
+    "bookTitle": "Sherlock Holmes’un Maceraları",
+    "author": "Arthur Conan Doyle",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/1661/pg1661-images.html",
+    "sourceNote": "Bohemya’da Bir Skandal, Holmes’un Watson’a gözlem dersi. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/1661"
+  },
+  {
+    "demoId": "166",
+    "text": "Henüz elimde veri yok. Veri olmadan kuram kurmak büyük hatadır. İnsan farkına varmadan kuramını gerçeklere uyduracağına, gerçekleri kuramına uydurmak için eğip bükmeye başlar.",
+    "bookTitle": "Sherlock Holmes’un Maceraları",
+    "author": "Arthur Conan Doyle",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/1661/pg1661-images.html",
+    "sourceNote": "Bohemya’da Bir Skandal, mektuba bakmadan hüküm vermek üzerine. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/1661"
+  },
+  {
+    "demoId": "165",
+    "text": "Başka insanları bunlar belki çekmezdi. Bense uzak şeylerin bitmeyen özlemiyle kıvranırım. Yasak denizlere açılmayı, yabancı kıyılara ayak basmayı severim. Güzel şeylerin farkındayım ama korkunç olanı da hemen sezerim.",
+    "bookTitle": "Moby Dick",
+    "author": "Herman Melville",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/2701/pg2701-images.html",
+    "sourceNote": "I. bölüm, Ishmael’in uzak denizlere duyduğu merak. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/2701"
+  },
+  {
+    "demoId": "164",
+    "text": "İlim ilim bilmekdir ilim kendin bilmekdir\nSen kendini bilmezsin ya nice okumakdır",
+    "bookTitle": "İlim İlim Bilmektir",
+    "author": "Yunus Emre",
+    "sourceUrl": "https://tr.wikisource.org/wiki/%C4%B0lim_%C4%B0lim_Bilmektir",
+    "sourceNote": "İlk beyit. Türkçe özgün metin.",
+    "rightsUrl": "https://tr.wikisource.org/wiki/Ki%C5%9Fi%3AYunus_Emre"
+  },
+  {
+    "demoId": "163",
+    "text": "Yabancı şubat başında, rüzgârın kestiği, karın savrulduğu bir kış günü geldi. Kalın eldivenli elinde küçük, siyah bir bavulla Bramblehurst istasyonundan yürümüştü. Tepeden tırnağa sarınmıştı. Yumuşak keçe şapkasının kenarı yüzünü, parlayan burnunun ucu dışında, bütünüyle örtüyordu.",
+    "bookTitle": "Görünmez Adam",
+    "author": "H. G. Wells",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/5230/pg5230-images.html",
+    "sourceNote": "I. bölüm, yabancının köye gelişinin açılışı. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/5230"
+  },
+  {
+    "demoId": "162",
+    "text": "“Tanrım, ne yorucu bir meslek seçmişim,” diye düşündü. “Günlerim yollarda geçiyor. İşin telaşı dükkânda olduğundan çok daha fazla. Bir de tren bağlantılarının derdi, düzensiz ve kötü yemekler, durmadan değişen, hiç kalıcı olmayan, bir türlü içtenleşmeyen insan ilişkileri var.”",
+    "bookTitle": "Dönüşüm",
+    "author": "Franz Kafka",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/22367/pg22367-images.html",
+    "sourceNote": "I. bölüm, Gregor’un işini düşünmesi. Almanca özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/22367"
+  },
+  {
+    "demoId": "161",
+    "text": "Annemle babamı düşünerek kendimi tutmasam çoktan istifa ederdim. Patronun karşısına dikilir, içimden geçenleri olduğu gibi söylerdim. Oturduğu yüksek masadan düşerdi herhalde! Zaten insanın masaya kurulup çalışanıyla tepeden konuşması da tuhaf.",
+    "bookTitle": "Dönüşüm",
+    "author": "Franz Kafka",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/22367/pg22367-images.html",
+    "sourceNote": "I. bölüm, Gregor’un patronuna söylemeyi hayal ettikleri. Almanca özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/22367"
+  },
+  {
+    "demoId": "160",
+    "text": "Ben yürürem elden ele\nDost sorarım dilden dile\nGurbette halim kim bile\nGel gör beni aşk neyledi",
+    "bookTitle": "Ben Yürürüm Yana Yana",
+    "author": "Yunus Emre",
+    "sourceUrl": "https://tr.wikisource.org/wiki/Ben_Y%C3%BCr%C3%BCr%C3%BCm_Yana_Yana",
+    "sourceNote": "Gurbeti anlatan dörtlük. Türkçe özgün metin.",
+    "rightsUrl": "https://tr.wikisource.org/wiki/Ki%C5%9Fi%3AYunus_Emre"
+  },
+  {
+    "demoId": "159",
+    "text": "Cansız bir bedene can vermek için yaklaşık iki yıl çalışmış, uykumdan ve sağlığımdan olmuştum. Bunu ölçüyü aşan bir tutkuyla istemiştim. Ama işim tamamlanınca düşümün güzelliği kayboldu. İçimi soluğumu kesecek bir dehşet ve tiksinti kapladı.",
+    "bookTitle": "Frankenstein",
+    "author": "Mary Shelley",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/84/pg84-images.html",
+    "sourceNote": "Victor, yaratığa can verdikten hemen sonra hissettiklerini anlatır. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/84"
+  },
+  {
+    "demoId": "158",
+    "text": "Yaşamın doruğuna vardığını belli eden bir coşku vardır, yaşam onun ötesine geçemez. İşin tuhafı, bu coşku insanın en canlı olduğu anda gelir ve o anda insan yaşadığını büsbütün unutur.",
+    "bookTitle": "Vahşetin Çağrısı",
+    "author": "Jack London",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/215/pg215-images.html",
+    "sourceNote": "III. bölüm, Buck’ın koşu sırasında ulaştığı coşku. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/215"
+  },
+  {
+    "demoId": "157",
+    "text": "Donmuş su yolunun iki yanında koyu renk ladin ormanı somurtuyordu. Yakınlarda esen bir rüzgâr ağaçların beyaz kırağısını söküp götürmüştü. Azalan ışıkta, kara ve uğursuz görünen ağaçlar birbirine doğru eğiliyor gibiydi. Toprağın üstünde engin bir sessizlik vardı. Her şey öyle ıssız ve soğuktu ki buna hüzün bile denemezdi.",
+    "bookTitle": "Beyaz Diş",
+    "author": "Jack London",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/910/pg910-images.html",
+    "sourceNote": "I. kitabın açılışı, donmuş su yolu. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/910"
+  },
+  {
+    "demoId": "156",
+    "text": "Birinin usulü başkasınınki kadar iyi olabilir, ama hepimiz kendi usulümüzü en çok severiz. Bu yüzden evin öbür tarafına geçmenin daha iyi olup olmayacağına kendiniz karar vermelisiniz.",
+    "bookTitle": "İkna",
+    "author": "Jane Austen",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/105/pg105-images.html",
+    "sourceNote": "Amiral Croft alışkanlıklarımız hakkında konuşur. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/105"
+  },
+  {
+    "demoId": "155",
+    "text": "Ben gelmedim dâvi için benim işim sevi için\nAşkın yeri gönüllerdir, gönüller yapmaya geldim",
+    "bookTitle": "Gönüller Yapmaya Geldim",
+    "author": "Yunus Emre",
+    "sourceUrl": "https://tr.wikisource.org/wiki/G%C3%B6n%C3%BCller_yapmaya_geldim",
+    "sourceNote": "Sevginin yeri üzerine iki dize. Türkçe özgün metin.",
+    "rightsUrl": "https://tr.wikisource.org/wiki/Ki%C5%9Fi%3AYunus_Emre"
+  },
+  {
+    "demoId": "154",
+    "text": "Benim düşüncem şu: Durdurabilecek gücümüz olduğu hâlde bir zulmü ya da haksızlığı görür ve hiçbir şey yapmazsak, o suçun bir parçası oluruz.",
+    "bookTitle": "Siyah İnci",
+    "author": "Anna Sewell",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/271/pg271-images.html",
+    "sourceNote": "Yolculuk sırasında dostlarının haksızlık karşısındaki tutumu. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/271"
+  },
+  {
+    "demoId": "153",
+    "text": "Her işte başlangıç en önemli kısımdır. Hele söz konusu olan genç ve henüz biçimlenmemiş bir varlıksa. Çünkü karakteri o sırada oluşur, verilmek istenen biçimi en kolay o zaman alır.",
+    "bookTitle": "Devlet",
+    "author": "Platon",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/1497/pg1497-images.html",
+    "sourceNote": "II. kitap, eğitimin başlangıcı. Benjamin Jowett’in kamu malı İngilizce çevirisinden Türkçeye aktarıldı.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/1497"
+  },
+  {
+    "demoId": "152",
+    "text": "Evlerimiz ne kadar kasvetli ve renksiz olursa olsun, biz etten kemikten insanlar onları dünyanın en güzel ülkesine bile tercih ederiz. İnsanın evi gibisi yoktur.",
+    "bookTitle": "Oz Büyücüsü",
+    "author": "L. Frank Baum",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/55/pg55-images.html",
+    "sourceNote": "Dorothy’nin Korkuluk’a evini neden özlediğini anlatması. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/55"
+  },
+  {
+    "demoId": "151",
+    "text": "Ne varlığa sevinirem\nNe yokluğa yerinirem\nAşkın ile öğünürem\nBana seni gerek seni",
+    "bookTitle": "Aşkın Aldı Benden Beni",
+    "author": "Yunus Emre",
+    "sourceUrl": "https://tr.wikisource.org/wiki/Halk_Edebiyat%C4%B1_Antolojisi/Yunus_Emre",
+    "sourceNote": "Antolojideki şiirin varlık ve yokluk üzerine dörtlüğü. Türkçe özgün metin.",
+    "rightsUrl": "https://tr.wikisource.org/wiki/Ki%C5%9Fi%3AYunus_Emre"
+  },
+  {
+    "demoId": "150",
+    "text": "“Cesaretin var,” dedi Oz. “İhtiyacın olan şey kendine güvenmek. Tehlikeyle yüz yüze gelince korkmayan canlı yoktur. Gerçek cesaret, korktuğun hâlde tehlikenin karşısına çıkmaktır. Sende de o cesaretten bolca var.”",
+    "bookTitle": "Oz Büyücüsü",
+    "author": "L. Frank Baum",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/55/pg55-images.html",
+    "sourceNote": "Oz’un Aslan’a cesaret hakkında söyledikleri. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/55"
+  },
+  {
+    "demoId": "149",
+    "text": "On dokuzuncu yüzyılın son yıllarında, dünyamızın insandan üstün ama onun kadar ölümlü akıllar tarafından dikkatle izlendiğine kimse inanmazdı. İnsanlar kendi işlerinin peşinde koşarken, bir su damlasında çoğalan kısa ömürlü canlılara mikroskopla bakan birinin dikkatiyle inceleniyorlardı.",
+    "bookTitle": "Dünyalar Savaşı",
+    "author": "H. G. Wells",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/36/pg36-images.html",
+    "sourceNote": "I. kitabın ilk paragrafı, Dünya’nın gözlemlendiği an. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/36"
+  },
+  {
+    "demoId": "148",
+    "text": "Aklı başında her çocuğun hayatında bir gün, bir yerlere gidip gömülü hazine aramak için karşı konulmaz bir istek duyduğu bir an gelir. Bu istek bir gün ansızın Tom’un başına da geldi.",
+    "bookTitle": "Tom Sawyer’ın Maceraları",
+    "author": "Mark Twain",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/74/pg74-images.html",
+    "sourceNote": "Tom’un hazine arama isteğinin başladığı bölüm. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/74"
+  },
+  {
+    "demoId": "147",
+    "text": "İçinde usul usul bir inanç filizlenmişti: Kendine güvenmeye başlamıştı. Artık deneyimli bir adamdı. Ejderhaların arasına girmiş, onların hayal ettiği kadar korkunç olmadıklarını görmüştü. Üstelik çok iyi nişan alamıyorlardı. Yürekli biri çoğu zaman onlara meydan okuyup kurtulabilirdi.",
+    "bookTitle": "Kızıl Cesaret Nişanı",
+    "author": "Stephen Crane",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/73/pg73-images.html",
+    "sourceNote": "Henry’nin deneyim kazandığını düşünmesi. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/73"
+  },
+  {
+    "demoId": "146",
+    "text": "Ten fânidir can ölmez\nÇün gitti giru gelmez\nÖlür ise ten ölür\nCanlar ölesi değül",
+    "bookTitle": "Mana Eri Bu Yolda",
+    "author": "Yunus Emre",
+    "sourceUrl": "https://tr.wikisource.org/wiki/Halk_Edebiyat%C4%B1_Antolojisi/Yunus_Emre",
+    "sourceNote": "Antolojideki şiirin can ve ten üzerine dörtlüğü. Türkçe özgün metin.",
+    "rightsUrl": "https://tr.wikisource.org/wiki/Ki%C5%9Fi%3AYunus_Emre"
+  },
+  {
+    "demoId": "145",
+    "text": "Beni kollarıyla sardı, kürek kemiklerimi yokladı. Kanatların güçlü mü, dedi. Geleneğin ve önyargının düzlüğünün üstüne yükselmek isteyen kuşun güçlü kanatları olmalı. Yaralanmış, tükenmiş, çırpına çırpına yere dönen güçsüzleri görmek acıdır.",
+    "bookTitle": "Uyanış",
+    "author": "Kate Chopin",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/160/pg160-images.html",
+    "sourceNote": "Edna, Matmazel Reisz’in sınamasını aktarır. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/160"
+  },
+  {
+    "demoId": "144",
+    "text": "Boşa harcanmış bir ömrün elden kaçan fırsatını, ne kadar uzun sürerse sürsün hiçbir pişmanlığın geri getiremeyeceğini bilmemek! Oysa ben de öyleydim. Ah, ben de öyleydim!",
+    "bookTitle": "Bir Noel Şarkısı",
+    "author": "Charles Dickens",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/46/pg46-images.html",
+    "sourceNote": "I. bölüm, Marley’nin kaybettiği fırsata yanması. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/46"
+  },
+  {
+    "demoId": "143",
+    "text": "Her şeyi iyi kaydet. Hiçbir ayrıntı önemsiz sayılmaz. Kuşkularını, tahminlerini bile yazmanı öneririm. Sonradan ne kadar doğru tahmin ettiğine bakmak ilginç olabilir. Başarıdan değil, başarısızlıktan öğreniriz.",
+    "bookTitle": "Drakula",
+    "author": "Bram Stoker",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/345/pg345-images.html",
+    "sourceNote": "Van Helsing’in Dr. Seward’a gözlemlerini kayda geçirme tavsiyesi. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/345"
+  },
+  {
+    "demoId": "142",
+    "text": "“Bir umut daha gitti. Hayatım gömülmüş umutlarla dolu bir mezarlık.” Bunu bir kitapta okumuştum. Ne zaman bir şey istediğim gibi gitmese kendimi avutmak için bu cümleyi söylerim.",
+    "bookTitle": "Yeşilin Kızı Anne",
+    "author": "L. M. Montgomery",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/45/pg45-images.html",
+    "sourceNote": "Anne’in boşa çıkan bir umudu kitaplardan öğrendiği sözle karşılaması. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/45"
+  },
+  {
+    "demoId": "141",
+    "text": "Öğüt versen bana öğüt kâr etmez\nO yârin hayâli karşımdan gitmez\nKementle bağlasam, kolum bağ tutmaz\nYârin zülfünden özge bağ m'olur",
+    "bookTitle": "Aşam Dedim Karlı Dağın Başından",
+    "author": "Karacaoğlan",
+    "sourceUrl": "https://tr.wikisource.org/wiki/A%C5%9Fam_Dedim_Karl%C4%B1_Da%C4%9F%C4%B1n_Ba%C5%9F%C4%B1ndan",
+    "sourceNote": "Öğüdün işe yaramadığını dile getiren dörtlük. Türkçe özgün metin.",
+    "rightsUrl": "https://tr.wikisource.org/wiki/Ki%C5%9Fi%3AKaracao%C4%9Flan"
+  },
+  {
+    "demoId": "140",
+    "text": "Alice güldü. “Denemenin faydası yok,” dedi. “İnsan imkânsız şeylere inanamaz.” “Pek alıştırma yapmamışsın herhalde,” dedi Kraliçe. “Senin yaşındayken her gün yarım saatimi buna ayırırdım. Bazen daha kahvaltı etmeden altı imkânsız şeye inandığım olurdu.”",
+    "bookTitle": "Aynanın İçinden",
+    "author": "Lewis Carroll",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/12/pg12-images.html",
+    "sourceNote": "V. bölüm, Beyaz Kraliçe’nin inanmak üzerine tavsiyesi. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/12"
+  },
+  {
+    "demoId": "139",
+    "text": "Ağzıma doğru ve dürüst olanı yapacağımı, oturup Jim’in yerini bildiren mektubu yazacağımı söyletmeye çalışıyordum. Ama içten içe bunun yalan olduğunu biliyordum. Tanrı da biliyordu. Yalanla dua edemezmiş insan. Bunu öğrendim.",
+    "bookTitle": "Huckleberry Finn’in Maceraları",
+    "author": "Mark Twain",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/76/pg76-images.html",
+    "sourceNote": "Huck, doğru olduğunu söylemeye çalıştığı şeye inanmadığını anlar. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/76"
+  },
+  {
+    "demoId": "138",
+    "text": "“Hediyesiz Noel, Noel sayılmaz,” diye söylendi Jo, halıya uzanmıştı. “Yoksul olmak ne korkunç!” diye iç geçirdi Meg, eski elbisesine bakarak. “Bazı kızların onca güzel şeyi varken bazılarının hiç olmaması hiç adil değil bence,” diye ekledi küçük Amy.",
+    "bookTitle": "Küçük Kadınlar",
+    "author": "Louisa May Alcott",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/514/pg514-images.html",
+    "sourceNote": "Romanın açılışı, kardeşler Noel’i beklerken. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/514"
+  },
+  {
+    "demoId": "137",
+    "text": "Mecliste ârif ol kelâmı dinle\nEl iki söylerse, sen birin söyle\nElinden geldikçe sen eylik eyle\nHatıra dokunup yıkıcı olma",
+    "bookTitle": "Dinle Sana Bir Nasihat Edeyim",
+    "author": "Karacaoğlan",
+    "sourceUrl": "https://tr.wikisource.org/wiki/Dinle_Sana_Bir_Nasihat_Edeyim",
+    "sourceNote": "Dinlemek ve iyilik etmek üzerine dörtlük. Türkçe özgün metin.",
+    "rightsUrl": "https://tr.wikisource.org/wiki/Ki%C5%9Fi%3AKaracao%C4%9Flan"
+  },
+  {
+    "demoId": "136",
+    "text": "Kadın olsun erkek olsun, iyi bir romandan zevk almayan insan dayanılmayacak kadar budala olmalı. Bayan Radcliffe’in bütün kitaplarını okudum, çoğunu büyük bir zevkle. Udolpho’nun Gizemleri’ne başlayınca elimden bırakamadım. İki günde bitirdim, bütün o süre boyunca tüylerim diken dikendi.",
+    "bookTitle": "Northanger Manastırı",
+    "author": "Jane Austen",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/121/pg121-images.html",
+    "sourceNote": "Henry Tilney, Catherine’e roman okuma zevkini anlatır. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/121"
+  },
+  {
+    "demoId": "135",
+    "text": "Bizzat ışık saçmıyor olabilirsin, Watson, ama ışığı iletiyorsun. Bazı insanlar dâhi olmasalar bile başkalarının dehasını harekete geçirmekte olağanüstü bir yetenek gösterir. Sevgili dostum, bu bakımdan sana çok şey borçluyum.",
+    "bookTitle": "Baskerville’lerin Köpeği",
+    "author": "Arthur Conan Doyle",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/2852/pg2852-images.html",
+    "sourceNote": "Holmes, Watson’ın kendi çıkarımlarına katkısını anlatır. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/2852"
+  },
+  {
+    "demoId": "134",
+    "text": "Bir öğleden sonra toprağı meyve bahçesi, koru ve otlak olarak ayırmaya yetti. Kapının önünde hangi güzel meşelerle çamların kalacağına, kurumuş her ağacın en iyi nereden görüneceğine de karar verdim. Sonra bıraktım, belki nadasa kalsın diye. Çünkü insan, el sürmeden bırakabildiği şeylerin sayısı kadar zengindir.",
+    "bookTitle": "Walden",
+    "author": "Henry David Thoreau",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/205/pg205-images.html",
+    "sourceNote": "Thoreau, baktığı araziyi satın almadan bıraktığı anı anlatır. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/205"
+  },
+  {
+    "demoId": "133",
+    "text": "Hoşumuza giden bir şeyi onaylamak için gerekçeler ne çabuk bulunur! Lady Russell, Sir Walter ile ailesinin kırdan ayrılmasına pek seviniyordu. Bunun için elinin altında çok iyi bir gerekçe daha vardı. Elizabeth, son zamanlarda Lady Russell’ın sona ermesini istediği bir yakınlık kurmaya başlamıştı.",
+    "bookTitle": "İkna",
+    "author": "Jane Austen",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/105/pg105-images.html",
+    "sourceNote": "Lady Russell’ın hoşuna giden bir kararı desteklemesi. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/105"
+  },
+  {
+    "demoId": "132",
+    "text": "Ağlayı ağlayı düştüm yollara\nKarışayım bozbulanık sellere\nAdı şanı duyulmadık illere\nGitmeyince gönül yardan ayrılmaz",
+    "bookTitle": "Ağlayı Ağlayı Düştüm Yollara",
+    "author": "Karacaoğlan",
+    "sourceUrl": "https://tr.wikisource.org/wiki/A%C4%9Flay%C4%B1_A%C4%9Flay%C4%B1_D%C3%BC%C5%9Ft%C3%BCm_Yollara",
+    "sourceNote": "Açılış dörtlüğü. Türkçe özgün metin.",
+    "rightsUrl": "https://tr.wikisource.org/wiki/Ki%C5%9Fi%3AKaracao%C4%9Flan"
+  },
+  {
+    "demoId": "131",
+    "text": "Hayatın en büyük mutluluğu sevildiğinden emin olmaktır. Kendin olduğun için sevilmek, hatta belki daha doğrusu, kendine rağmen sevilmek. Bu güveni görmeyen insan da duyabilir. Sıkıntı içinde elinden tutulması, onun için bir okşayış gibidir.",
+    "bookTitle": "Sefiller",
+    "author": "Victor Hugo",
+    "translator": "Tomar",
+    "sourceUrl": "https://fr.wikisource.org/wiki/Les_Mis%C3%A9rables_(1908)/Tome_1/Livre_5/04",
+    "sourceNote": "Fantine bölümü, piskoposun kardeşi ve sevginin değeri üzerine anlatıcı sözü. Fransızca özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://fr.wikisource.org/wiki/Auteur%3AVictor_Hugo"
+  },
+  {
+    "demoId": "130",
+    "text": "Koltuğunun altında bir kitap olmadan evden çıkmazdı, çoğu zaman iki kitapla dönerdi. Oturduğu evin zemin katındaki dört odayı yalnızca çerçevelenmiş kuru bitkiler ve eski ustaların gravürleri süslerdi. Bir kılıcın ya da tüfeğin görüntüsü kanını dondururdu.",
+    "bookTitle": "Sefiller",
+    "author": "Victor Hugo",
+    "translator": "Tomar",
+    "sourceUrl": "https://fr.wikisource.org/wiki/Les_Mis%C3%A9rables_(1908)/Tome_3/Livre_5/04",
+    "sourceNote": "Marius bölümü, botaniğe meraklı Mösyö Mabeuf’ün alışkanlıkları. Fransızca özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://fr.wikisource.org/wiki/Auteur%3AVictor_Hugo"
+  },
+  {
+    "demoId": "129",
+    "text": "Bu düşünceler mektuba başlarken duyduğum huzursuzluğu dağıttı. İçimde beni göklere çıkaran bir coşku hissediyorum. Çünkü zihni, düşüncenin yönelip durulacağı sağlam bir amaç kadar sakinleştiren hiçbir şey yoktur.",
+    "bookTitle": "Frankenstein",
+    "author": "Mary Shelley",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/84/pg84-images.html",
+    "sourceNote": "Walton, kuzeye yolculuğu sırasında kız kardeşine amacını yazar. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/84"
+  },
+  {
+    "demoId": "128",
+    "text": "Hayal hayal oldu karşımda dağlar\nEşinden ayrılan ah çeker ağlar\nDökülmüş yapraklar bozulmuş bağlar\nBülbülün konduğu dallar perişan",
+    "bookTitle": "Çıkıp Yücesine Seyran Eyledim",
+    "author": "Karacaoğlan",
+    "sourceUrl": "https://tr.wikisource.org/wiki/%C3%87%C4%B1k%C4%B1p_Y%C3%BCcesine_Seyran_Eyledim",
+    "sourceNote": "Dalların ve bağların perişanlığını anlatan dörtlük. Türkçe özgün metin.",
+    "rightsUrl": "https://tr.wikisource.org/wiki/Ki%C5%9Fi%3AKaracao%C4%9Flan"
+  },
+  {
+    "demoId": "127",
+    "text": "Öyleyse yaşayın ve mutlu olun, sevgili çocuklarım. Tanrı insana geleceği göstermeye razı oluncaya dek bütün insan bilgeliğinin şu iki sözde toplandığını asla unutmayın: Bekle ve umut et.",
+    "bookTitle": "Monte Kristo Kontu",
+    "author": "Alexandre Dumas",
+    "translator": "Tomar",
+    "sourceUrl": "https://fr.wikisource.org/wiki/Le_Comte_de_Monte-Cristo/Chapitre_117",
+    "sourceNote": "Son bölüm, Dantès’in dostlarına bıraktığı mektup. Fransızca özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://fr.wikisource.org/wiki/Auteur%3AAlexandre_Dumas"
+  },
+  {
+    "demoId": "126",
+    "text": "Mutlu olmak için her zaman acele ederiz, Mösyö Danglars. Çünkü uzun süre acı çektikten sonra talihin bir gün yüzümüze gülebileceğine inanmak çok zor gelir. Ama acelem yalnızca kendimi düşündüğümden değil. Paris’e gitmem gerek.",
+    "bookTitle": "Monte Kristo Kontu",
+    "author": "Alexandre Dumas",
+    "translator": "Tomar",
+    "sourceUrl": "https://fr.wikisource.org/wiki/Le_Comte_de_Monte-Cristo/Chapitre_3",
+    "sourceNote": "Dantès gençliğinde Danglars’a acele edişini açıklar. Fransızca özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://fr.wikisource.org/wiki/Auteur%3AAlexandre_Dumas"
+  },
+  {
+    "demoId": "125",
+    "text": "Artık buna inanmıyorum. Her şeyden önce senin gibi düşünebilen bir insan olduğuma inanıyorum. Hiç değilse öyle biri olmaya çalışmalıyım. Çoğu kişinin seni haklı bulacağını, kitaplarda da bunu okuyacağımı biliyorum. Ama artık çoğunluğun söyledikleriyle ve kitaplarda yazanlarla yetinemem. Kendi başıma düşünüp anlamam gerek.",
+    "bookTitle": "Bir Bebek Evi",
+    "author": "Henrik Ibsen",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.ibsen.uio.no/DRVIT_Du%7CDu80a.html",
+    "sourceNote": "III. perde, Nora, Torvald’a kendi başına düşünmek istediğini anlatır. Norveççe özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.ibsen.uio.no/DRVIT_Du%7CDu80a.html"
+  },
+  {
+    "demoId": "124",
+    "text": "Evimiz bir oyun odasından ibaretti. Babamın evinde onun oyuncak bebeğiydim, burada senin oyuncak karın oldum. Çocuklar da benim oyuncak bebeklerimdi. Sen benimle oynarken ben eğlenirdim, ben onlarla oynarken de onlar. Bizim evliliğimiz buydu, Torvald.",
+    "bookTitle": "Bir Bebek Evi",
+    "author": "Henrik Ibsen",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.ibsen.uio.no/DRVIT_Du%7CDu80a.html",
+    "sourceNote": "III. perde, Nora evliliğini bir oyun odasına benzetir. Norveççe özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.ibsen.uio.no/DRVIT_Du%7CDu80a.html"
+  },
+  {
+    "demoId": "123",
+    "text": "Garbî yeli serin değer\nAkça deniz dalga döğer\nKaracaoğlan yârin anar\nSen estikçe garbî yeli",
+    "bookTitle": "Garbî Yeli",
+    "author": "Karacaoğlan",
+    "sourceUrl": "https://tr.wikisource.org/wiki/Sayfa:Halk_Edebiyat%C4%B1_Antolojisi.pdf/88",
+    "sourceNote": "Antolojideki ikinci şiirin son dörtlüğü. Türkçe özgün metin.",
+    "rightsUrl": "https://tr.wikisource.org/wiki/Ki%C5%9Fi%3AKaracao%C4%9Flan"
+  },
+  {
+    "demoId": "122",
+    "text": "Saygıyı, sevginin olması gereken yerdeki boşluğu örtmek için icat etmişler. Artık beni sevmiyorsan bunu açıkça söylemen daha iyi, daha dürüst olur.",
+    "bookTitle": "Anna Karenina",
+    "author": "Lev Tolstoy",
+    "translator": "Tomar",
+    "sourceUrl": "https://ru.wikisource.org/wiki/%D0%90%D0%BD%D0%BD%D0%B0_%D0%9A%D0%B0%D1%80%D0%B5%D0%BD%D0%B8%D0%BD%D0%B0_(%D0%A2%D0%BE%D0%BB%D1%81%D1%82%D0%BE%D0%B9)/%D0%A7%D0%B0%D1%81%D1%82%D1%8C_VII/%D0%93%D0%BB%D0%B0%D0%B2%D0%B0_XXIV",
+    "sourceNote": "Anna, Vronski’yle konuşurken saygı ve sevgi arasındaki boşluğu dile getirir. Rusça özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://ru.wikisource.org/wiki/%D0%90%D0%B2%D1%82%D0%BE%D1%80%3A%D0%9B%D0%B5%D0%B2_%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B5%D0%B2%D0%B8%D1%87_%D0%A2%D0%BE%D0%BB%D1%81%D1%82%D0%BE%D0%B9"
+  },
+  {
+    "demoId": "121",
+    "text": "Kurbanına acıyorsa acı çeksin. Geniş bir bilinç ve derin bir yürek için acı ve ıstırap kaçınılmazdır. Gerçekten büyük insanların yeryüzünde büyük bir keder duyması gerekir, sanırım.",
+    "bookTitle": "Suç ve Ceza",
+    "author": "Fyodor Dostoyevski",
+    "translator": "Tomar",
+    "sourceUrl": "https://ru.wikisource.org/wiki/%D0%9F%D1%80%D0%B5%D1%81%D1%82%D1%83%D0%BF%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B8_%D0%BD%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D0%BD%D0%B8%D0%B5_(%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9)/%D0%A7%D0%B0%D1%81%D1%82%D1%8C_III/%D0%93%D0%BB%D0%B0%D0%B2%D0%B0_V",
+    "sourceNote": "Raskolnikov, Porfiri’nin yanında acıdan söz eder. Rusça özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://ru.wikisource.org/wiki/%D0%90%D0%B2%D1%82%D0%BE%D1%80%3A%D0%A4%D1%91%D0%B4%D0%BE%D1%80_%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D0%B8%D1%87_%D0%94%D0%BE%D1%81%D1%82%D0%BE%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9"
+  },
+  {
+    "demoId": "120",
+    "text": "Beyazlık bir renkten çok rengin görünür yokluğu, aynı zamanda bütün renklerin birleşimi sayıldığı için midir ki engin bir kar manzarasına bakarken anlamla dolu, dilsiz bir boşluk görür ve ürpeririz?",
+    "bookTitle": "Moby Dick",
+    "author": "Herman Melville",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/2701/pg2701-images.html",
+    "sourceNote": "Ishmael, balinanın beyazlığının yarattığı çelişkiyi tartar. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/2701"
+  },
+  {
+    "demoId": "119",
+    "text": "Gerildi, tekmeyi indirdi öyle bir küfeye:\nTekermeker küfe bîtâb düştü tâ öteye.\n— Benim babam senin altında öldü, sen hâlâ\nKurumla yat sokağın ortasında böyle daha!",
+    "bookTitle": "Safahat: Küfe",
+    "author": "Mehmet Âkif Ersoy",
+    "sourceUrl": "https://tr.wikisource.org/wiki/K%C3%BCfe",
+    "sourceNote": "Hasan’ın eski küfeye tepkisi. Türkçe özgün metin.",
+    "rightsUrl": "https://tr.wikisource.org/wiki/Ki%C5%9Fi%3AMehmet_%C3%82kif_Ersoy"
+  },
+  {
+    "demoId": "118",
+    "text": "Kasvetli bir gece yarısı, bitkin ve yorgun, unutulmuş bilgilere dair nice tuhaf kitabın başında düşünüyordum. Başım düşüyor, neredeyse uyuyordum ki ansızın bir tıkırtı oldu. Sanki biri odamın kapısını usulca vuruyordu. “Bir ziyaretçi,” diye mırıldandım, “kapımı çalıyor. Hepsi bundan ibaret.”",
+    "bookTitle": "Kuzgun",
+    "author": "Edgar Allan Poe",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/1065/pg1065-images.html",
+    "sourceNote": "Şiirin ilk kıtasından, anlatıcının kapıda bir ses duyması. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/1065"
+  },
+  {
+    "demoId": "117",
+    "text": "Hiç fundalık görmedim,\nDenizi de görmedim hiç.\nYine de fundanın nasıl göründüğünü,\nBir dalganın ne olduğunu bilirim.",
+    "bookTitle": "Şiirler",
+    "author": "Emily Dickinson",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/12242/pg12242-images.html",
+    "sourceNote": "“I never saw a moor” diye başlayan şiirin ilk kıtası. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/12242"
+  },
+  {
+    "demoId": "116",
+    "text": "İnsan işlerinde de bir gelgit vardır. Sular yükselirken akıntıya girersen talih seni alıp götürür. O anı kaçırırsan hayat yolculuğun sığlıklara, sıkıntılara saplanır. Biz şimdi suların en yüksek olduğu yerdeyiz.",
+    "bookTitle": "Julius Caesar",
+    "author": "William Shakespeare",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/100/pg100-images.html",
+    "sourceNote": "IV. perde, Brutus insan işlerinde fırsatın gelip geçmesini anlatır. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/100"
+  },
+  {
+    "demoId": "115",
+    "text": "Korkaklar ölümlerinden önce defalarca ölür. Cesurlar ölümün tadını bir kez alır. Duyduğum bütün tuhaflıklar içinde en tuhafı, insanların ölümden korkması. Kaçınılmaz bir sondur o, vakti gelince gelir.",
+    "bookTitle": "Julius Caesar",
+    "author": "William Shakespeare",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/100/pg100-images.html",
+    "sourceNote": "II. perde, Caesar, Calpurnia’nın kaygılarına cevap verir. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/100"
+  },
+  {
+    "demoId": "114",
+    "text": "— İyi ya işte... Biliyorsan şimdi de hatırladın. Bildiğini hatırlamak, yeniden bir şey öğrenmek kadar faydalıdır.",
+    "bookTitle": "Üç Nasihat",
+    "author": "Ömer Seyfettin",
+    "sourceUrl": "https://tr.wikisource.org/wiki/%C3%9C%C3%A7_Nasihat",
+    "sourceNote": "Müstakim Efendi’nin Durmuş’a bildiğini hatırlamak üzerine karşılığı. Türkçe özgün metin.",
+    "rightsUrl": "https://tr.wikisource.org/wiki/Ki%C5%9Fi%3A%C3%96mer_Seyfettin"
+  },
+  {
+    "demoId": "113",
+    "text": "Kuşkularımız bize ihanet eder. Denemekten korktuğumuz için, çoğu zaman elde edebileceğimiz iyilikleri kendi elimizle kaybederiz.",
+    "bookTitle": "Kısasa Kısas",
+    "author": "William Shakespeare",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/100/pg100-images.html",
+    "sourceNote": "I. perde, Lucio’nun Isabella’yı cesaretlendirmesi. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/100"
+  },
+  {
+    "demoId": "112",
+    "text": "Herkesi sev, az kişiye güven, kimseye kötülük etme. Düşmanına karşı gücün olsun ama onu kullanmaya heves etme. Dostunu canın gibi sakla. Seni sessizliğin için ayıplasınlar, sözlerin için suçlamasınlar.",
+    "bookTitle": "Yeter ki Sonu İyi Bitsin",
+    "author": "William Shakespeare",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/100/pg100-images.html",
+    "sourceNote": "I. perde, Kontes’in oğluna vedalaşırken verdiği öğüt. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/100"
+  },
+  {
+    "demoId": "111",
+    "text": "Herkesi dinle, pek azına sözünü söyle. Herkesin eleştirisine kulak ver, hükmünü kendine sakla. Giysin kesenin elverdiğince iyi olsun, gösterişli olmasın. Çünkü insanı çoğu kez giysisi ele verir.",
+    "bookTitle": "Hamlet",
+    "author": "William Shakespeare",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/1524/pg1524-images.html",
+    "sourceNote": "I. perde, Polonius’un Laertes’e yolculuk öncesi öğüdü. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/1524"
+  },
+  {
+    "demoId": "110",
+    "text": "Mersinli'deki minimini evimde, kocaman çınar ağaçlarının hiç durmadan öten ninnileri içinde, kitapların dipsiz girdabına dalmış gitmiştim.",
+    "bookTitle": "Bir Hatıra",
+    "author": "Ömer Seyfettin",
+    "sourceUrl": "https://tr.wikisource.org/wiki/Bir_Hat%C4%B1ra",
+    "sourceNote": "Anlatıcının kitaplarla geçirdiği vaktin tasviri. Türkçe özgün metin.",
+    "rightsUrl": "https://tr.wikisource.org/wiki/Ki%C5%9Fi%3A%C3%96mer_Seyfettin"
+  },
+  {
+    "demoId": "109",
+    "text": "İtibarım, itibarım, itibarım! Ah, itibarımı yitirdim. İçimdeki ölümsüz yanı kaybettim. Geriye kalan yalnızca hayvan. İtibarım, Iago, itibarım!",
+    "bookTitle": "Othello",
+    "author": "William Shakespeare",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/1531/pg1531-images.html",
+    "sourceNote": "II. perde, Cassio itibarını kaybettiğini düşünür. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/1531"
+  },
+  {
+    "demoId": "108",
+    "text": "Şairin gözü, ince bir çılgınlıkla, gökten yere, yerden göğe döner durur. Hayal gücü bilinmeyen şeylere biçim verdikçe şairin kalemi de onları görünür kılar, havadan ibaret o hiçliğe bir yer ve bir ad verir.",
+    "bookTitle": "Bir Yaz Gecesi Rüyası",
+    "author": "William Shakespeare",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/1514/pg1514-images.html",
+    "sourceNote": "V. perde, Theseus’un hayal gücü hakkında konuşması. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/1514"
+  },
+  {
+    "demoId": "107",
+    "text": "Bir ayartıdan kurtulmanın tek yolu ona teslim olmaktır. Direnirsen, ruhun kendine yasak ettiği şeylere özlem duymaktan hastalanır. Kendi koyduğu yasaların korkunç ve yasadışı saydığı şeyleri ister durur.",
+    "bookTitle": "Dorian Gray'in Portresi",
+    "author": "Oscar Wilde",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/174/pg174-images.html",
+    "sourceNote": "Lord Henry’nin Dorian’a ayartılma üzerine söyledikleri. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/174"
+  },
+  {
+    "demoId": "106",
+    "text": "Yaşama bu bakışta bir görkem var. Yaşamın güçleri başlangıçta birkaç biçime ya da tek bir biçime verilmişti. Gezegenimiz kütleçekiminin değişmez yasasına uyarak dönüp dururken böylesine yalın bir başlangıçtan sayısız güzel ve hayranlık uyandırıcı biçim ortaya çıktı ve çıkmaya devam ediyor.",
+    "bookTitle": "Türlerin Kökeni",
+    "author": "Charles Darwin",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/1228/pg1228-images.html",
+    "sourceNote": "Son bölümün kapanışı, yaşamın ilk biçimlerinden çeşitliliğe. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/1228"
+  },
+  {
+    "demoId": "105",
+    "text": "Pardösümü çıkardım. Mendilimle üstümü başımı sildim. Soldaki salona girdim. Çılgın yağmur, pancurları, camları tokatlıyor, fasılalı ıslıklarla acı bir fırtına gürültüsü koparıyordu.",
+    "bookTitle": "Çirkinliğin Esrarı",
+    "author": "Ömer Seyfettin",
+    "sourceUrl": "https://tr.wikisource.org/wiki/%C3%87irkinli%C4%9Fin_Esrar%C4%B1",
+    "sourceNote": "Anlatıcı, sağanak bastırınca salona sığınır. Türkçe özgün metin.",
+    "rightsUrl": "https://tr.wikisource.org/wiki/Ki%C5%9Fi%3A%C3%96mer_Seyfettin"
+  },
+  {
+    "demoId": "104",
+    "text": "İçinden bir ürperti geçti, denizin üstünden geçen bir titreme gibi. Ama denizde bir ürperti ötekini izler, yüzlercesi olur. Peter’inki bir taneydi. Bir an sonra yine kayanın üstünde dimdik duruyordu. Yüzünde gülümsemesi, içinde çalan bir davul vardı.",
+    "bookTitle": "Peter Pan",
+    "author": "J. M. Barrie",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/16/pg16-images.html",
+    "sourceNote": "Peter kayalığın üzerinde korkusuyla baş başa kalır. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/16"
+  },
+  {
+    "demoId": "103",
+    "text": "Boya da duvar kâğıdı da odayı oğlan çocuklarıyla dolu bir okul kullanmış gibi görünüyor. Kâğıt, yatağımın başında kolumun uzanabildiği yere kadar, odanın öbür yanında da yere yakın geniş bir bölümde parça parça sökülmüş. Hayatımda daha kötü bir duvar kâğıdı görmedim.",
+    "bookTitle": "Sarı Duvar Kâğıdı",
+    "author": "Charlotte Perkins Gilman",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/1952/pg1952-images.html",
+    "sourceNote": "Anlatıcı kaldığı odanın duvarlarını inceler. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/1952"
+  },
+  {
+    "demoId": "102",
+    "text": "“Bir sözcüğü kullandığımda,” dedi Humpty Dumpty küçümseyen bir sesle, “o sözcük benim ona vermek istediğim anlama gelir. Ne fazlasına ne eksiğine.” “Mesele,” dedi Alice, “bir sözcüğe bu kadar çok farklı anlam verip veremeyeceğin.” “Mesele,” dedi Humpty Dumpty, “kimin sözünün geçeceği. Hepsi bu.”",
+    "bookTitle": "Aynanın İçinden",
+    "author": "Lewis Carroll",
+    "translator": "Tomar",
+    "sourceUrl": "https://www.gutenberg.org/cache/epub/12/pg12-images.html",
+    "sourceNote": "VI. bölüm, Alice ile Humpty Dumpty sözcüklerin anlamını tartışır. İngilizce özgün metinden Tomar için çevrildi.",
+    "rightsUrl": "https://www.gutenberg.org/ebooks/12"
+  },
+  {
+    "demoId": "101",
+    "text": "Zavallı ben, elimdeki şu üç telli saz ile\nMilletimin felâketli hayatını söyleyim;\nDertlilerin göz yaşını çevrem ile sileyim!...",
+    "bookTitle": "Türk Sazı: Benim Şiirlerim",
+    "author": "Mehmet Emin Yurdakul",
+    "sourceUrl": "https://tr.wikisource.org/wiki/Benim_%C5%9Eiirlerim",
+    "sourceNote": "Şairin sazıyla neyi söylemek istediğini anlattığı son dizeler. Türkçe özgün metin.",
+    "rightsUrl": "https://tr.wikisource.org/wiki/Ki%C5%9Fi%3AMehmet_Emin_Yurdakul"
+  },
+  {
     "demoId": "100",
     "text": "Gregor Samsa bir sabah huzursuz düşlerden uyandığında, yatağında kocaman bir haşereye dönüşmüş olduğunu gördü. Zırh gibi sert sırtının üstünde yatıyordu. Başını biraz kaldırınca, yay biçiminde sert çizgilerle bölünmüş, kahverengi, bombeli karnını gördü. Üzerindeki yorgan neredeyse yere kayacaktı.",
     "bookTitle": "Dönüşüm",
