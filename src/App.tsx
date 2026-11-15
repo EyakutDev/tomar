@@ -62,6 +62,12 @@ function BackIcon() {
   return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M19 12H5m0 0 6-6m-6 6 6 6" /></svg>;
 }
 
+function FullscreenIcon({ active }: { active: boolean }) {
+  return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d={active ? "M4 9h5V4m11 5h-5V4M4 15h5v5m11-5h-5v5" : "M9 4H4v5m11-5h5v5M4 15v5h5m11-5v5h-5"} />
+  </svg>;
+}
+
 function passageDensity(text: string) {
   return text.length > 520 ? "dense" : text.length > 420 ? "long" : "normal";
 }
@@ -80,6 +86,12 @@ function PassageSource({ bookTitle, author }: Pick<Passage, "bookTitle" | "autho
 function App() {
   const [view, setView] = useState<View>("feed");
   const [theme, setTheme] = useState<Theme>(initialTheme);
+  const [fullscreen, setFullscreen] = useState(() => Boolean(document.fullscreenElement));
+  const fullscreenAvailable = document.fullscreenEnabled && typeof document.documentElement.requestFullscreen === "function";
+  const iphoneBrowser = /iPhone|iPod/.test(navigator.userAgent)
+    && !(navigator as Navigator & { standalone?: boolean }).standalone
+    && !matchMedia("(display-mode: standalone)").matches;
+  const showFullscreen = fullscreenAvailable || iphoneBrowser || fullscreen;
   const [draft, setDraft] = useState<PassageDraft>({ text: "", bookTitle: "", author: "" });
   const [publishing, setPublishing] = useState(false);
   const [passages, setPassages] = useState<Passage[]>([]);
@@ -99,6 +111,7 @@ function App() {
   const [reportReason, setReportReason] = useState<ReportReason>("incorrect_source");
   const [reportDetails, setReportDetails] = useState("");
   const [reportBusy, setReportBusy] = useState(false);
+  const fullscreenHelpRef = useRef<HTMLDialogElement>(null);
   const feedRef = useRef<HTMLDivElement>(null);
   const restoredRef = useRef(false);
   const pendingScrollRef = useRef<string | null>(null);
@@ -114,6 +127,12 @@ function App() {
     localStorage.setItem(THEME_KEY, theme);
     document.querySelector('meta[name="theme-color"]')?.setAttribute("content", theme === "dark" ? "#222b26" : "#fbfaf7");
   }, [theme]);
+
+  useEffect(() => {
+    const syncFullscreen = () => setFullscreen(Boolean(document.fullscreenElement));
+    document.addEventListener("fullscreenchange", syncFullscreen);
+    return () => document.removeEventListener("fullscreenchange", syncFullscreen);
+  }, []);
 
   const loadFirst = useCallback(async () => {
     setLoading(true);
@@ -321,8 +340,22 @@ function App() {
     }
   }
 
+  async function toggleFullscreen() {
+    if (iphoneBrowser && !fullscreenAvailable && !document.fullscreenElement) {
+      fullscreenHelpRef.current?.showModal();
+      return;
+    }
+    try {
+      if (document.fullscreenElement) await document.exitFullscreen();
+      else await document.documentElement.requestFullscreen({ navigationUI: "hide" });
+    } catch {
+      setNotice("Tam ekran modu değiştirilemedi.");
+    }
+  }
+
   function dock() {
-    return <nav className={view === "feed" ? "bottom-dock" : "bottom-dock bottom-dock--with-back"} aria-label="Ana işlemler">
+    const fullscreenLabel = fullscreen ? "Tam ekrandan çık" : "Tam ekrana geç";
+    return <nav className={`bottom-dock${view === "feed" ? "" : " bottom-dock--with-back"}${showFullscreen ? " bottom-dock--with-fullscreen" : ""}`} aria-label="Ana işlemler">
       <div className={`dock-switch dock-switch--${view}`} aria-label="Ekle ve kaydedilenler arasında geç" onPointerDown={event => { dockDragStartRef.current = event.clientX; }} onPointerUp={event => {
         if (dockDragStartRef.current === null) return;
         const distance = event.clientX - dockDragStartRef.current;
@@ -343,6 +376,7 @@ function App() {
         <button className="dock-tab" type="button" aria-pressed={view === "saved"} onClick={() => void openSaved()}><BookmarkIcon /><span>Kaydedilenler</span></button>
       </div>
       <button className="dock-icon" type="button" onClick={() => setTheme(current => current === "light" ? "dark" : "light")} aria-label={theme === "light" ? "Koyu temaya geç" : "Açık temaya geç"}><ThemeIcon theme={theme} /></button>
+      {showFullscreen && <button className="dock-icon dock-fullscreen" type="button" onClick={() => void toggleFullscreen()} aria-label={fullscreenLabel} title={fullscreenLabel} aria-haspopup={!fullscreenAvailable && iphoneBrowser ? "dialog" : undefined}><FullscreenIcon active={fullscreen} /></button>}
       {view !== "feed" && <button className="dock-icon" type="button" onClick={() => returnToFeed()} disabled={view === "submit" && publishing} aria-label="Akışa dön" title="Akışa dön"><BackIcon /></button>}
     </nav>;
   }
@@ -380,6 +414,14 @@ function App() {
     </section></main>}
 
     {dock()}
+
+    {iphoneBrowser && <dialog ref={fullscreenHelpRef} className="passage-preview fullscreen-help" aria-labelledby="fullscreen-help-title">
+      <header className="passage-preview-header">
+        <h2 id="fullscreen-help-title">iPhone’da tam ekran</h2>
+        <form method="dialog"><button className="icon-button" type="submit" aria-label="Kapat">×</button></form>
+      </header>
+      <p>Tomar’ı Safari’de aç. Paylaş menüsünden <strong>Ana Ekrana Ekle</strong>’ye dokun. <strong>Web Uygulaması Olarak Aç</strong> seçeneği görünüyorsa açık bırak. Ardından Tomar’ı ana ekrandaki simgesinden aç.</p>
+    </dialog>}
 
     {selected && <div className="overlay" onMouseDown={event => { if (event.target === event.currentTarget) setSelected(null); }}><section className="sheet" role="dialog" aria-modal="true" aria-label={reporting ? "Pasajı bildir" : "Pasaj kaynağı"}>
       <button className="sheet-close" type="button" onClick={() => { setSelected(null); setReporting(false); }} aria-label="Kapat">×</button>
