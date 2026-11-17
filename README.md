@@ -2,7 +2,7 @@
 
 Tomar, Türkçe ve dünya edebiyatından kitap pasajlarını keşfetmek ve paylaşmak için mobil öncelikli bir web uygulaması. Her ekranda bir pasaj var. Kaydırarak okumaya devam edebilir, beğendiğin pasajı kaydedebilir veya kitap ve yazar bilgileriyle birlikte kendi seçtiğin bir bölümü akışa ekleyebilirsin.
 
-[Canlı uygulamayı aç](https://tomar.169-58-194-231.sslip.io/)
+[Canlı uygulamayı aç](https://ttomar.online/)
 
 ## Ekran görüntüleri
 
