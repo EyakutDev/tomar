@@ -15,7 +15,11 @@ const examples: Passage[] = curated.map((passage, index) => ({
   curated: true,
   contributorName: "Tomar",
   createdAt: new Date(2026, 10, 9 - index).toISOString(),
+  dailyBatch: "dailyBatch" in passage && typeof passage.dailyBatch === "string" ? passage.dailyBatch : null,
 }));
+
+const snapshots = new Map<string, Passage[]>();
+let nextSnapshot = 0;
 
 function userPosts(): Passage[] {
   try {
@@ -28,12 +32,19 @@ function userPosts(): Passage[] {
 }
 
 export function demoPassages(before?: string): PassagePage {
-  const page = [...userPosts(), ...examples]
-    .filter(item => !before || BigInt(item.id) < BigInt(before))
-    .sort((a, b) => BigInt(a.id) > BigInt(b.id) ? -1 : 1)
-    .slice(0, 21);
-  const items = page.slice(0, 20);
-  return { items, nextCursor: page.length > 20 ? items.at(-1)?.id ?? null : null };
+  const cursor = before?.match(/^v(\d+):(\d+)$/);
+  if (before && !cursor) {
+    const page = [...userPosts(), ...examples].filter(item => BigInt(item.id) < BigInt(before))
+      .sort((a, b) => BigInt(a.id) > BigInt(b.id) ? -1 : 1).slice(0, 21);
+    return { items: page.slice(0, 20), nextCursor: page.length > 20 ? page[19].id : null };
+  }
+  const version = cursor?.[1] ?? String(++nextSnapshot);
+  if (!before) snapshots.set(version, [...userPosts(), ...examples]);
+  const ordered = snapshots.get(version);
+  if (!ordered) throw new Error("Önizleme akışını yeniden açın.");
+  const start = Number(cursor?.[2] ?? 0);
+  const items = ordered.slice(start, start + 20);
+  return { items, nextCursor: start + items.length < ordered.length ? `v${version}:${start + items.length}` : null };
 }
 
 export function demoPassage(id: string): Passage | null {

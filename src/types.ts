@@ -8,6 +8,7 @@ export interface Passage {
   curated: boolean;
   contributorName: string;
   createdAt: string;
+  dailyBatch?: string | null;
 }
 
 export interface PassagePage {

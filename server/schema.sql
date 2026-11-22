@@ -13,6 +13,7 @@ CREATE TABLE IF NOT EXISTS passages (
 
 ALTER TABLE passages ADD COLUMN IF NOT EXISTS source_url TEXT;
 ALTER TABLE passages ADD COLUMN IF NOT EXISTS curated BOOLEAN NOT NULL DEFAULT false;
+ALTER TABLE passages ADD COLUMN IF NOT EXISTS daily_batch DATE;
 ALTER TABLE passages DROP CONSTRAINT IF EXISTS passages_text_check;
 ALTER TABLE passages ADD CONSTRAINT passages_text_check CHECK (char_length(text) BETWEEN 80 AND 1600);
 
@@ -30,3 +31,24 @@ CREATE TABLE IF NOT EXISTS reports (
 
 CREATE INDEX IF NOT EXISTS reports_open_idx
   ON reports (created_at DESC) WHERE resolved_at IS NULL;
+
+CREATE TABLE IF NOT EXISTS feed_versions (
+  id BIGSERIAL PRIMARY KEY,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
+CREATE TABLE IF NOT EXISTS feed_positions (
+  version_id BIGINT NOT NULL REFERENCES feed_versions(id),
+  passage_id BIGINT NOT NULL REFERENCES passages(id),
+  position BIGINT NOT NULL,
+  PRIMARY KEY (version_id, position),
+  UNIQUE (version_id, passage_id)
+);
+
+CREATE TABLE IF NOT EXISTS daily_publications (
+  day DATE PRIMARY KEY,
+  fingerprint TEXT NOT NULL,
+  passage_ids BIGINT[] NOT NULL CHECK (cardinality(passage_ids) = 10),
+  feed_version BIGINT NOT NULL REFERENCES feed_versions(id),
+  completed_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);

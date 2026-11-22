@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState, type FormEvent } from "react";
 import { getPassage, getPassages, isDemo, publishPassage, reportPassage } from "./api";
 import { createShareCard } from "./shareCard";
+import { mixPassages } from "../server/feed-order";
 import type { NewPassage, Passage, ReportReason } from "./types";
 
 type View = "feed" | "submit" | "saved";
@@ -15,19 +16,6 @@ const REPLAY_HISTORY_LIMIT = 60;
 const SAVED_KEY = "merak:saved";
 const THEME_KEY = "merak:theme";
 const LAST_KEY = "merak:last";
-
-function shufflePassages(passages: Passage[], lastId?: string): Passage[] {
-  const shuffled = [...passages];
-  for (let index = shuffled.length - 1; index > 0; index--) {
-    const other = Math.floor(Math.random() * (index + 1));
-    [shuffled[index], shuffled[other]] = [shuffled[other], shuffled[index]];
-  }
-  if (shuffled.length > 1 && shuffled[0].id === lastId) {
-    const other = 1 + Math.floor(Math.random() * (shuffled.length - 1));
-    [shuffled[0], shuffled[other]] = [shuffled[other], shuffled[0]];
-  }
-  return shuffled;
-}
 
 function readSaved(): string[] {
   try {
@@ -202,8 +190,8 @@ function App() {
     if (loadingMoreRef.current || loading || !passages.length) return;
     if (!nextCursor) {
       if (replayQueueRef.current.length === 0) {
-        const lastId = replayCards.at(-1)?.passage.id ?? passages.at(-1)?.id;
-        replayQueueRef.current = shufflePassages(passages, lastId);
+        const previous = replayCards.at(-1)?.passage ?? passages.at(-1);
+        replayQueueRef.current = mixPassages(passages, previous);
       }
       const batch = replayQueueRef.current.splice(0, REPLAY_BATCH_SIZE).map(passage => ({
         passage,

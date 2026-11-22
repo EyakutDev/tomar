@@ -73,6 +73,8 @@ Web arayüzü `http://127.0.0.1:5173`, API `http://127.0.0.1:3001` üzerinden ç
 
 ## İçerik ve geliştirme
 
+Günlük seçki `content/daily/YYYY-MM-DD.json` dosyasında tam 10 pasaj olarak hazırlanır. `npm run publish:daily -- YYYY-MM-DD` seçkiyi bir işlem içinde yayımlar ve günün yeni pasajları birbirine komşu olmayacak şekilde tüm akışı karıştırır. Aynı tarihle tekrar çalıştırıldığında pasajlar çoğalmaz. Akış sürümü sayfalama boyunca sabit kalır, eski pasaj bağlantıları kimlikleriyle çalışmaya devam eder.
+
 - [Seçki dosyası](content/curated-passages.json) pasaj metnini, eser ve yazar bilgisini, varsa çevirmeni ve kaynak bağlantısını içerir. `npm run seed:curated` aynı metni ve yazarı tekrar eklemez. İnceleme bekleyen eserler [hak kuyruğunda](content/rights-queue.md) tutulur.
 - [Arayüz](src/) React bileşenlerini, demo modunu ve paylaşım kartı üretimini içerir. [Sunucu](server/) API'yi, PostgreSQL şemasını, içerik yükleme ve moderasyon komutlarını içerir.
 

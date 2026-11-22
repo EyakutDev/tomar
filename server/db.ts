@@ -27,6 +27,7 @@ export interface PassageRow extends QueryResultRow {
   curated: boolean;
   contributor_name: string;
   created_at: Date;
+  daily_batch: string | null;
 }
 
 export function publicPassage(row: PassageRow) {
@@ -40,5 +41,6 @@ export function publicPassage(row: PassageRow) {
     curated: row.curated,
     contributorName: row.curated && row.contributor_name === "Merak" ? "Tomar" : row.contributor_name,
     createdAt: row.created_at.toISOString(),
+    dailyBatch: row.daily_batch ?? null,
   };
 }
