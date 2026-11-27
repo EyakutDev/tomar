@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import "@fontsource-variable/source-serif-4";
 import App from "./App";
 import "./styles.css";
+import "./analytics";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>

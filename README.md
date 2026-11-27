@@ -40,6 +40,13 @@ Tomar, Türkçe ve dünya edebiyatından kitap pasajlarını keşfetmek ve payla
 | Veri | PostgreSQL ve `localStorage` | PostgreSQL ortak pasajları ve bildirimleri, tarayıcı ise kişisel okuma tercihlerini saklar |
 | Paylaşım | Canvas API | Pasajı ve kaynak bilgisini tarayıcıda PNG karta dönüştürür |
 | Yayın | Docker ve Caddy | Uygulama konteynerde çalışır, Caddy HTTPS trafiğini Tomar'a iletir |
+| İstatistik | Cloudflare Web Analytics | Canlı sitenin ziyaret ve sayfa görüntüleme istatistiklerini toplar |
+
+## Ziyaret istatistikleri
+
+Canlı site, ücretsiz Cloudflare Web Analytics kullanır. İstatistikler, site sahibinin Cloudflare hesabındaki **Observability → Analytics → Web analytics** bölümünden `ttomar.online` seçilerek görüntülenir. Ölçüm, kurulumdan sonraki ziyaretlerle başlar.
+
+Takip kodu yalnızca üretim derlemesinde ve `ttomar.online` / `www.ttomar.online` alan adlarında yüklenir; yerel geliştirme, demo modu ve önizleme adresleri ölçülmez. Koddaki Cloudflare site kimliği herkese açık takip kimliğidir; hesaba veya raporlara erişim sağlayan bir API anahtarı değildir.
 
 ## Yerelde çalıştırma
 
